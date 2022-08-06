@@ -1,22 +1,12 @@
 /* ---------------------------------- Utils --------------------------------- */
-@import './utils/variables';
-@import './utils/mixin';
-@import './utils/placeholders';
+@import './utils/modul';
 
 /* ---------------------------------- Base ---------------------------------- */
 @import './base/common';
 @import './base/reset';
 
 /* ------------------------------- Components ------------------------------- */
-@import './components/container';
-@import './components/button';
+@import './components/module';
 
 /* --------------------------------- Layouts -------------------------------- */
-@import './layouts/hero-header';
-@import './layouts/products';
-@import './layouts/about';
-@import './layouts/advantages';
-@import './layouts/gallery';
-@import './layouts/customer-reviews';
-@import './layouts/contacts';
-@import './layouts/footer';
+@import './layouts/module';
