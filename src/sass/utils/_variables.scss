@@ -2,3 +2,20 @@
 $main-font: 'DM Sans', sans-serif;
 $secondary-font: 'Titan One', cursive;
 /* -------------------------------------------------------------------------- */
+
+/* --------------------------------- Кольори -------------------------------- */
+:root {
+  --white_cl: #ffffff;
+  --txt-light_cl: #907e82;
+
+  --accent_cl: #d41443;
+  --accent-dark_cl: #d41342;
+  --accent-light_cl: #ffa5ba;
+
+  --product-one_cl: #ffb8ca;
+  --product-two_cl: #f0d1a5;
+  --product-tree_cl: #c2e297;
+
+  --bg-light_cl: #fff5f6;
+  --btn-hover_cl: #ecebeb;
+}
