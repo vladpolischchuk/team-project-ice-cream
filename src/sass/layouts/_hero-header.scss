@@ -43,6 +43,11 @@
 }
 .page-header__icon--ml{
 	margin-left: 27px;
+	@media screen and (min-width:768px) {
+		.menu-container.is-closed & {
+			margin-left: 13px;
+		}
+	}
 }
 .logo {
 	display: flex;
@@ -116,6 +121,7 @@
 		padding: 12px 43px;
 		.menu-container.is-closed &{
 			transform: translate(-254px, -28px);
+			padding: 12px 37px;
 		}
 	}
 	@media screen and (min-width: 1200px) {
