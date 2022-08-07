@@ -1,6 +1,8 @@
 // зупиняєм прокрутку якщо відкрито меню (JS)
 .off_overflow{
-	overflow: hidden;
+	@media screen and (max-width: 1199px){
+		overflow: hidden;
+	}
 }
 // --------------Блок Header--------------//
 .page-header {
