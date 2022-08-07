@@ -128,6 +128,10 @@
 		display: block;
 		padding-left: 20px;
 	}
+	@media screen and (min-width:1200px) {
+		font-size: 16px;
+		line-height: 21px;
+	}
 	&:hover {
 		color: var(--accent_cl);
 	}
