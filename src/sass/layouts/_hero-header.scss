@@ -65,10 +65,13 @@
 // --------------клас-модифікатор для кнопки в header--------------//
 .page-header__icon--ml{
 	margin-left: 27px;
-	@media screen and (min-width:768px) {
+	@media screen and (min-width:768px){
 		.menu-container.is-closed & {
 			margin-left: 13px;
 		}
+	}
+	@media screen and (min-width:1200px){
+		margin-left: 13px;
 	}
 }
 
@@ -162,4 +165,30 @@
 .hero {
 	background-color: var(--product-one_cl);
 	overflow: hidden;
+}
+
+//--------------Стилі картинок--------------//
+.hero__icecream-img{
+	display: block;
+	width: 171px;
+	@media screen and (min-width:768px){
+		width: 143px;
+	}
+	@media screen and (min-width:1200px) {
+		width: 236px;
+	}
+}
+.hero__description-img{
+	display: block;
+	width: 152px;
+	@media screen and (min-width:1200px) {
+		width: 213px;
+	}
+}
+.hero__girl-img{
+	display: block;
+	width: 190px;
+	@media screen and (min-width:1200px) {
+		width: 304px;
+	}
 }
