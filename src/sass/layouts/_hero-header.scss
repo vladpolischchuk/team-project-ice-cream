@@ -1,45 +1,3 @@
-%button-light {
-	border: none;
-	border-radius: 22px;
-	display: flex;
-	align-items: center;
-	text-align: center;
-	padding: 12px 51px;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 21px;
-	@media screen and (min-width: 1200px) {
-		padding: 15px 24px;
-		font-size: 14px;
-		line-height: 18px;
-	}
-
-	color: var(--accent_cl);
-	background-color: var(--white_cl);
-
-	&:hover {
-		background-color: var(--btn-hover_cl);
-	}
-}
-
-%button-dark {
-	border: none;
-	border-radius: 20px;
-	display: flex;
-	align-items: center;
-	text-align: center;
-	color: var(--white_cl);
-	background-color: var(--accent-dark_cl);
-	padding: 9px 15px;
-	font-size: 16px;
-	line-height: 21px;
-
-	@media screen and (min-width: 1200px) {
-		padding: 15px 24px;
-		font-size: 14px;
-		line-height: 18px;
-	}
-}
 .off_overflow{
 	overflow: hidden;
 }
@@ -101,7 +59,7 @@
 		top: 0;
 		right: 0;
 		background-color: #E17992;
-		padding: 60px 20px;
+		padding: 60px 0;
 		transform: translateX(0);
 		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
@@ -129,6 +87,8 @@
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	@media screen and (max-width:1199px) {
 		border: 1px solid #E18298;
+		display: block;
+		padding-left: 20px;
 	}
 	&:hover {
 		color: var(--accent_cl);
@@ -136,7 +96,30 @@
 }
 
 .page-header__button-buy {
-	@extend %button-light;
+	border: none;
+	border-radius: 22px;
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 21px;
+	margin: 0 20px;
+	padding: 12px 48px 12px 61px;
+	color: var(--accent_cl);
+	@media screen and (min-width:768px) {
+		margin: 0 34px;
+		padding: 12px 43px;
+		.menu-container.is-closed &{
+			position: absolute;
+			top: 32px;
+			right: 32px;
+		}
+	}
+	@media screen and (min-width: 1200px) {
+		padding: 15px 24px;
+		font-size: 14px;
+		line-height: 18px;
+	}
 }
 
 .hero {
