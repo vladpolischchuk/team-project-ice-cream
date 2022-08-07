@@ -44,7 +44,11 @@
 .page-header {
 	padding: 8px 20px;
 }
-
+.page-header__menu-togler {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
 .logo {
 	display: flex;
 	align-items: center;
