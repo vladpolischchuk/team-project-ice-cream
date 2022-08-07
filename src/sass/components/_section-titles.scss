@@ -1,0 +1,24 @@
+/* --------------------------------- Uppertitle & Subtitle --------------------------------- */
+.section-uppertitle,
+.section-subtitle {
+  font-family: $secondary-font;
+  @include get-font-style(normal, 400, 30px, 1.13, 0.04em);
+  text-transform: uppercase;
+}
+
+.section-uppertitle {
+  color: var(--accent-light_cl);
+}
+
+.section-subtitle {
+  color: var(--white_cl);
+}
+
+/* ---------------------------------- Title --------------------------------- */
+.section-title {
+  font-family: $secondary-font;
+  @include get-font-style(normal, 400, 58px, 1.13, 0.06em);
+  text-transform: uppercase;
+
+  color: var(--accent_cl);
+}
