@@ -20,17 +20,11 @@
             <path fill="var(--color2, #d41443)"
                 d="M8.629 23.308c0 3.524 1.224 4.229 7.406 4.229s7.406-.705 7.406-4.229c0-1.538-.322-2.178-.966-2.178-.58 0-.966.577-.966 1.538 0 3.588-4.894 3.908-5.603.384-.322-1.858-.515-1.922-3.8-1.922H8.629v2.178zM12.622 30.548c.386 2.05 6.955 1.858 6.955-.128 0-.705-.837-.961-3.606-.961-3.027 0-3.542.192-3.349 1.089z" />
         </symbol>
-        <symbol id="burger" viewBox="0 0 20 14">
-            <path d="M0 1H20" stroke="#D41443"/>
-            <path d="M0 7H20" stroke="#D41443"/>
-            <path d="M0 13H20" stroke="#D41443"/>
+        <symbol id="burger" viewBox="0 0 46 32">
+            <path stroke-width="2.286" d="M0 2.286h45.714M0 16h45.714M0 29.714h45.714" />
         </symbol>
-        <symbol id="close" viewBox="0 0 14 14">
-            <path d="M1.25925 1L14.7407 15" stroke="white"/>
-            <path d="M1 14.7407L15 1.25924" stroke="white"/>
-        </symbol>
-        <symbol id="arrow-min" viewBox="0 0 8 10">
-            <path d="M1.1069 1L6.36476 5L1.1069 9" fill="transparent" stroke="#D41443" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <symbol id="close" viewBox="0 0 32 32">
+            <path stroke-width="2" d="m2.519 2 26.963 28M2 29.481 30 2.518" />
         </symbol>
         <symbol id="advant1" viewBox="0 0 21 32">
             <path
@@ -63,6 +57,10 @@
         <symbol id="arrow-right" viewBox="0 0 32 32">
             <path
                 d="m19.414 27.414 10-10a2 2 0 0 0 0-2.828l-10-10a2 2 0 1 0-2.828 2.828L23.172 14H4a2 2 0 1 0 0 4h19.172l-6.586 6.586c-.39.39-.586.902-.586 1.414s.195 1.024.586 1.414a2 2 0 0 0 2.828 0z" />
+        </symbol>
+        <symbol id="arrow-bracket" viewBox="0 0 26 32">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="6.4"
+                d="M5.173 3.2l14.169 12.8-14.169 12.8"></path>
         </symbol>
     </defs>
 </svg>
