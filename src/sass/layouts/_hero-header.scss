@@ -2,15 +2,21 @@
 .off_overflow{
 	overflow: hidden;
 }
+// --------------Блок Header--------------//
 .page-header {
 	padding: 8px 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	@media screen and (min-width:768px) {
+		padding-top: 32px;
+	}
+	@media screen and (min-width: 1200px) {
+		padding-top: 32px;
+		padding-bottom: 0;
+		display: flex;
+	}
 	position: relative;
 }
 
-// кнопка перемикання мобільного меню
+// --------------кнопка перемикання мобільного меню--------------//
 .page-header__menu-toggler {
 	border: none;
 	background-color: transparent;
@@ -18,6 +24,18 @@
 	position: absolute;
 	top: 33px;
 	right: 6px;
+	@media screen and (min-width:768px) {
+		top: 53px;
+		right: 198px;
+		&.is-open{
+			top: 26px;
+			right: 16px;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		display: none;
+	}
 }
 
 .page-header__menu-toggler .page-header__icon-open {
@@ -44,7 +62,7 @@
 	opacity: 1;
 }
 
-// клас-модифікатор для кнопки в header
+// --------------клас-модифікатор для кнопки в header--------------//
 .page-header__icon--ml{
 	margin-left: 27px;
 	@media screen and (min-width:768px) {
@@ -53,17 +71,8 @@
 		}
 	}
 }
-.logo {
-	display: flex;
-	align-items: center;
-	font-family: $secondary-font;
-	font-size: 26px;
-	line-height: 30px;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	color: var(--accent_cl);
-}
-// контейнер мобільного меню
+
+// --------------контейнер мобільного меню--------------//
 .menu-container {
 	@media screen and (max-width:1199px) {
 		position: absolute;
@@ -75,6 +84,12 @@
 		transform: translateX(20px);
 		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
+	@media screen and (min-width:1200px) {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		margin-left: auto;
+	}
 }
 
 .menu-container.is-closed {
@@ -82,14 +97,21 @@
 		transform: translateX(calc(100% + 20px));
 	}
 }
+
+//--------------Блок навігації--------------//
 .navigation {
 	@media screen and (max-width:1199px) {
 		margin-top: 19px;
 	}
+	@media screen and (min-width:1200px) {
+		& ul{
+			display: flex;
+		}
+	}
 }
 
 .navigation__link {
-	padding: 12px 0;
+	padding: 12px 18px;
 	display: inline-block;
 	font-weight: 700;
 	font-size: 14px;
@@ -105,7 +127,7 @@
 		color: var(--accent_cl);
 	}
 }
-// Кнопка купити в меню
+// --------------Кнопка купити в меню--------------
 .page-header__button-buy {
 	border: none;
 	border-radius: 22px;
@@ -119,7 +141,7 @@
 	color: var(--accent_cl);
 	transform: translate(0);
 	
-	@media screen and (min-width:768px) {
+	@media screen and (min-width:768px) and (max-width:1199px) {
 		margin: 0 34px;
 		padding: 12px 43px;
 		.menu-container.is-closed &{
@@ -129,12 +151,14 @@
 		}
 	}
 	@media screen and (min-width: 1200px) {
-		padding: 15px 24px;
-		font-size: 14px;
-		line-height: 18px;
+		margin:0 0 0 123;
+		padding: 11px 37px;
+		font-size: 16px;
+		line-height: 21px;
+		transform: translate(0);
 	}
 }
-
+//-------------- Секція Hero --------------//
 .hero {
 	background-color: var(--product-one_cl);
 	overflow: hidden;
