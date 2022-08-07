@@ -6,7 +6,7 @@
 	};
 
 	refs.menuItems.forEach(item => {
-		item.addEventListener("click", toggleMenu);
+		item.addEventListener("click", closeMenu);
 	});
 	refs.togglerMenu.addEventListener("click", toggleMenu);
 
@@ -14,5 +14,11 @@
 		refs.togglerMenu.classList.toggle("is-open");
 		refs.Menu.classList.toggle("is-closed");
 		document.body.classList.toggle("off_overflow");
+	}
+	function closeMenu() {
+		if (refs.togglerMenu.classList.contains("is-open")){
+			toggleMenu()
+		};
+		
 	}
 })();
