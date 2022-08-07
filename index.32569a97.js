@@ -1,0 +1,2 @@
+!function(){var e={togglerMenu:document.querySelector("[data-menu-button]"),menuItems:document.querySelectorAll("[data-menu-item]"),Menu:document.querySelector("[data-menu-container]")};function t(){e.togglerMenu.classList.toggle("is-open"),e.Menu.classList.toggle("is-closed"),document.body.classList.toggle("off_overflow")}e.menuItems.forEach((function(e){e.addEventListener("click",t)})),e.togglerMenu.addEventListener("click",t)}();
+//# sourceMappingURL=index.32569a97.js.map
