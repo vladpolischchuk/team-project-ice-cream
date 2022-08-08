@@ -1,0 +1,20 @@
+.btn-light{
+	border: none;
+	background-color: var(--white_cl);
+	color: var(--accent_cl);
+	border-radius: 22px;
+	font-size: 14px;
+	line-height: 18.23px;
+	padding: 9px 14px;
+	display: inline-block;
+}
+.btn-dark {
+	border: none;
+	background-color: var(--accent_cl);
+	color: var(--white_cl);
+	border-radius: 22px;
+	font-size: 14px;
+	line-height: 18.23px;
+	padding: 9px 14px;
+	display: inline-block;
+}
