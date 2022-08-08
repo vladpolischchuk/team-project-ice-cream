@@ -6,7 +6,7 @@
 			</svg>
 		</a>
 
-		<div class="menu-container is-closed" data-menu-container>
+		<div class="menu-container is-closed" id="menu-container" data-menu-container>
 			<button type="button" class="page-header__button-buy" data-modal-buy>
 				Buy now
 				<svg class="page-header__icon page-header__icon--ml" width="8" height="10">
@@ -33,7 +33,12 @@
 				</ul>
 			</nav>
 		</div>
-		<button class="page-header__menu-toggler btn" data-menu-button>
+		<button
+			class="page-header__menu-toggler btn"
+			aria-controls="menu-container"
+			aria-expanded="false"
+			data-menu-button
+		>
 			<svg class="page-header__icon-open" width="20" height="12">
 				<use href="./images/icons.svg#burger"></use>
 			</svg>
@@ -42,14 +47,13 @@
 			</svg>
 		</button>
 	</header>
-
+	<h1 class="section-title page-heading">
+		ice cream <br />
+		made with <br />
+		<span class="page-heading__sub-text">passion</span>
+	</h1>
 	<div class="hero__container">
-		<h1 class="page-heading">
-			ice cream <br />
-			made with <br />
-			<span class="page-heading__sub-text">passion</span>
-		</h1>
-		<a class="hero__link section-title" href="#products">Products</a>
+		<a class="hero__link hero__link--dark" href="#products">Products</a>
 		<a class="hero__link" href="#how-its-made">How it's made?</a>
 	</div>
 	<div class="hero__description">
