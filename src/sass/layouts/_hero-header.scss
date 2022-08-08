@@ -41,6 +41,14 @@
 	color: var(--accent_cl);
 	font-size: 58px;
 	line-height: 90.5%;
+	@media screen and (min-width:768px) {
+		font-size: 22px;
+		line-height: 25px;
+	}
+	@media screen and (min-width: 1200px) {
+		font-size: 38px;
+		line-height: 44px;
+		}
 }
 // --------------кнопка перемикання мобільного меню--------------//
 .page-header__menu-toggler {
@@ -255,7 +263,7 @@
 	}
 }
 .hero__description{
-	@media screen and (max-width:1199px){
+	@media screen and (max-width:767px){
 		display: none;
 	}
 	position: absolute;
@@ -274,7 +282,7 @@
 	}
 }
 .hero__girl-img{
-	@media screen and (max-width:1199px) {
+	@media screen and (max-width:767px) {
 		display: none;
 	}
 	display: block;
@@ -290,7 +298,7 @@
 	}
 }
 .hero__info{
-	@media screen and (max-width:1199px) {
+	@media screen and (max-width:767px) {
 		display: none;
 	}
 }
