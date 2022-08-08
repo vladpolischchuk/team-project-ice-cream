@@ -1,0 +1,86 @@
+/* --------------------------------- Footer --------------------------------- */
+.footer {
+  position: relative;
+  padding: 20px 0 5px 0;
+
+  background-color: var(--bg-light_cl);
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    bottom: 61px;
+
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+  }
+}
+
+// Titles
+.footer__group-titles {
+  max-width: 234px;
+}
+
+.footer__uppertitle {
+  margin-bottom: 16px;
+}
+
+.footer__title {
+  margin-bottom: 40px;
+}
+
+// Social list
+.footer__group-links {
+  margin-left: auto;
+  margin-bottom: 56px;
+
+  max-width: 230px;
+}
+
+.footer__list {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 40px;
+
+  max-width: 153px;
+}
+
+.footer__item:nth-child(n + 2) {
+  margin-left: 28px;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  background-color: var(--social-links-bg_cl);
+  border-radius: 50%;
+}
+
+.footer__icon {
+  fill: var(--white_cl);
+}
+
+.footer__contact {
+  @include get-font-style(normal, 700, 12px, 1.86, 0);
+}
+
+.footer__contact-link {
+  color: var(--accent_cl);
+}
+
+// Copyright
+.footer__wrapper {
+}
+
+.footer__copyright {
+  width: 138px;
+
+  @include get-font-style(normal, 700, 14px, 1.52, 0);
+
+  color: var(--txt-light_cl);
+}
