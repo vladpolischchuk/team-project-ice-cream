@@ -91,7 +91,7 @@
 		background-color: var(--mobile-menu-bg);
 		padding: 60px 0;
 		transform: translateX(20px);
-		transition: transform $animation-func;
+		transition: transform $animation-func, background-color $animation-func;
 	}
 	@media screen and (min-width:1200px) {
 		display: flex;
@@ -102,7 +102,7 @@
 	&.is-closed {
 		@media screen and (max-width:1199px) {
 			transform: translateX(calc(100% + 20px));
-			transition: transform $animation-func;
+			transition: transform $animation-func, background-color $animation-func;
 			background-color: transparent;
 			& .navigation{
 				opacity: 0;
@@ -113,6 +113,8 @@
 
 //--------------Блок навігації--------------//
 .navigation {
+	opacity: 1;
+	transition: opacity $animation-func;
 	@media screen and (max-width:1199px) {
 		margin-top: 19px;
 	}
@@ -239,4 +241,25 @@
 		bottom: 0;
 		right: 16px;
 	}
+}
+.hero__info{
+	@media screen and (max-width:1199px) {
+		display: none;
+	}
+}
+.hero__container{
+	position: relative;
+	z-index: 3;
+}
+.hero__link{
+	border: none;
+	background-color: var(--white_cl);
+	border-radius: 22px;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 21px;
+	padding: 9px 14px;
+	color: var(--accent_cl);
+	transform: translate(0);
 }
