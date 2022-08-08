@@ -11,6 +11,8 @@
 	refs.togglerMenu.addEventListener("click", toggleMenu);
 
 	function toggleMenu() {
+		const expanded = refs.togglerMenu.getAttribute("aria-expanded") === "true" || false;
+		refs.togglerMenu.setAttribute("aria-expanded", !expanded);
 		refs.togglerMenu.classList.toggle("is-open");
 		refs.Menu.classList.toggle("is-closed");
 		document.body.classList.toggle("off_overflow");
