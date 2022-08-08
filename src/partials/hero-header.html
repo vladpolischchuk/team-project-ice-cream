@@ -1,4 +1,4 @@
-<section class="hero container">
+<div class="hero container">
 	<header class="page-header">
 		<a href="/" class="logo">
 			<svg class="logo__icon" width="199" height="50">
@@ -7,7 +7,7 @@
 		</a>
 
 		<div class="menu-container is-closed" id="menu-container" data-menu-container>
-			<button type="button" class="page-header__button-buy" data-modal-buy>
+			<button type="button" class="page-header__button-buy btn btn--light-mode" data-modal-buy>
 				Buy now
 				<svg class="page-header__icon page-header__icon--ml" width="8" height="10">
 					<use href="./images/icons.svg#arrow-min"></use>
@@ -33,12 +33,7 @@
 				</ul>
 			</nav>
 		</div>
-		<button
-			class="page-header__menu-toggler btn"
-			aria-controls="menu-container"
-			aria-expanded="false"
-			data-menu-button
-		>
+		<button class="page-header__menu-toggler" aria-controls="menu-container" aria-expanded="false" data-menu-button>
 			<svg class="page-header__icon-open" width="20" height="12">
 				<use href="./images/icons.svg#burger"></use>
 			</svg>
@@ -53,8 +48,8 @@
 		<span class="page-heading__sub-text">passion</span>
 	</h1>
 	<div class="hero__container">
-		<a class="hero__link btn-dark" href="#products">Products</a>
-		<a class="hero__link btn-light" href="#how-its-made">How it's made?</a>
+		<a class="hero__link btn btn--red-mode" href="#products">Products</a>
+		<a class="hero__link btn btn--light-mode" href="#how-its-made">How it's made?</a>
 	</div>
 	<div class="hero__description">
 		<picture class="hero__description-img">
@@ -70,7 +65,7 @@
 				srcset="./images/header-milk/milk-tab.png 1x, ./images/header-milk/milk-tab@2x.png 2x"
 				type="image/png"
 			/>
-			<img src="./images/header-milk/milk-desc.png" alt="Молоко" width="213" />
+			<img src="./images/header-milk/milk-desc.png" alt="Milk" width="213" />
 		</picture>
 		<div class="hero__description-text">
 			<ul class="hero__description-card">
@@ -87,7 +82,7 @@
 					et
 				</li>
 			</ul>
-			<button class="hero__description-toggler" data-description-toggle>
+			<button class="hero__description-toggler btn btn--light-mode" data-description-toggle>
 				<svg class="hero__description-icon" width="8" height="8">
 					<use href="./images/icons.svg#arrow-right"></use>
 				</svg>
@@ -112,7 +107,7 @@
 			srcset="./images/header-ice-cream/ice-cream-mob.png 1x, ./images/header-ice-cream/ice-cream-mob@2x.png 2x"
 			type="image/png"
 		/>
-		<img src="./images/header-ice-cream/ice-cream-desc.png" alt="Морозиво" width="236" />
+		<img src="./images/header-ice-cream/ice-cream-desc.png" alt="Ice cream" width="236" />
 	</picture>
 	<ul class="hero__info">
 		<li class="hero__info-item">
@@ -139,6 +134,6 @@
 			srcset="./images/header-girl/girl-tab.png 1x, ./images/header-girl/girl-tab@2x.png 2x"
 			type="image/png"
 		/>
-		<img src="./images/header-girl/girl-desc.png" alt="Поїдання морозива" width="304" />
+		<img src="./images/header-girl/girl-desc.png" alt="Eating ice cream" width="304" />
 	</picture>
-</section>
+</div>
