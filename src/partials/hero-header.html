@@ -72,14 +72,27 @@
 			/>
 			<img src="./images/header-milk/milk-desc.png" alt="Молоко" width="213" />
 		</picture>
-		<p class="hero__description-text">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-		</p>
-		<button class="hero__description-toggler" data-description-toggle>
-			<svg class="hero__description-icon" width="20" height="12">
-				<use href="./images/icons.svg#arrow-right"></use>
-			</svg>
-		</button>
+		<div class="hero__description-text">
+			<ul class="hero__description-card">
+				<li>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et
+				</li>
+				<li hidden>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et
+				</li>
+				<li hidden>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et
+				</li>
+			</ul>
+			<button class="hero__description-toggler" data-description-toggle>
+				<svg class="hero__description-icon" width="8" height="8">
+					<use href="./images/icons.svg#arrow-right"></use>
+				</svg>
+			</button>
+		</div>
 	</div>
 	<picture class="hero__icecream-img">
 		<!-- desktop screen -->
@@ -102,8 +115,16 @@
 		<img src="./images/header-ice-cream/ice-cream-desc.png" alt="Морозиво" width="236" />
 	</picture>
 	<ul class="hero__info">
-		<li class="hero__info-item"><span class="hero__info-category">16</span>cafes</li>
-		<li class="hero__info-item"><span class="hero__info-category">23</span>food trucks</li>
+		<li class="hero__info-item">
+			<span class="hero__info-category section-title">16</span>
+			<br />
+			cafes
+		</li>
+		<li class="hero__info-item">
+			<span class="hero__info-category section-title">23</span>
+			<br />
+			food trucks
+		</li>
 	</ul>
 	<picture class="hero__girl-img">
 		<!-- desktop screen -->
