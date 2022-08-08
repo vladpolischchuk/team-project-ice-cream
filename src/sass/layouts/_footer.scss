@@ -13,40 +13,73 @@
     width: 100%;
     height: 1px;
     background-color: #e1e1e1;
+
+    // Tablet
+    @media screen and (min-width: 768px) {
+      bottom: 42px;
+    }
+  }
+}
+
+.footer__wrapper {
+  // Mobile
+  @media screen and (max-width: 767.5px) {
+    margin-bottom: 56px;
+  }
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 48px;
   }
 }
 
 // Titles
 .footer__group-titles {
   max-width: 234px;
+
+  // Mobile
+  @media screen and (max-width: 767.5px) {
+    margin-bottom: 40px;
+  }
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    max-width: 340px;
+  }
 }
 
 .footer__uppertitle {
   margin-bottom: 16px;
-}
 
-.footer__title {
-  margin-bottom: 40px;
+  // Tablet
+  @media screen and (min-width: 768px) {
+    margin-bottom: 12px;
+  }
 }
 
 // Social list
 .footer__group-links {
   margin-left: auto;
-  margin-bottom: 56px;
 
   max-width: 230px;
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    max-width: 268px;
+  }
 }
 
 .footer__list {
   display: flex;
-  margin-left: auto;
+  justify-content: flex-end;
   margin-bottom: 40px;
-
-  max-width: 153px;
 }
 
 .footer__item:nth-child(n + 2) {
-  margin-left: 28px;
+  margin-left: 30px;
 }
 
 .footer__social-link {
@@ -59,6 +92,12 @@
 
   background-color: var(--social-links-bg_cl);
   border-radius: 50%;
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .footer__icon {
@@ -67,6 +106,11 @@
 
 .footer__contact {
   @include get-font-style(normal, 700, 12px, 1.86, 0);
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    @include get-font-style(normal, 700, 14px, 1.86, 0);
+  }
 }
 
 .footer__contact-link {
@@ -74,13 +118,19 @@
 }
 
 // Copyright
-.footer__wrapper {
-}
-
 .footer__copyright {
-  width: 138px;
-
   @include get-font-style(normal, 700, 14px, 1.52, 0);
 
   color: var(--txt-light_cl);
+
+  // Mobile
+  @media screen and (max-width: 767.5px) {
+    width: 138px;
+  }
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    @include get-font-style(normal, 700, 14px, 1.86, 0.02em);
+    text-align: center;
+  }
 }
