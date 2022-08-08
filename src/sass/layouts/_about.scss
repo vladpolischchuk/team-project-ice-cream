@@ -13,6 +13,11 @@
     (min-resolution: 2dppx) {
       background-image: url("../images/about-bg/sectionbg-desc@2x.png");
     }
+
+        @media screen and (max-width: 1199px)
+        {
+          background-image: none;
+        }
 }
 
 .about__text-title {
@@ -72,8 +77,9 @@
   color: var(--accent_cl);
   background-color: var(--white_cl);
 
-  .btn__icon {
-fill: var(--accent_cl);
+  .btn-icon {
+    margin-left: 14px;
+--color1: currentColor;
   }
 
 
@@ -103,6 +109,10 @@ background-repeat: no-repeat;
   (min-resolution: 2dppx) {
     background-image: url("../images/about-cow/cow-mob@2x.png");
   }
+
+    @media screen and (min-width: 768px) {
+      background-image: none;
+    }
 
 }
 
@@ -138,3 +148,40 @@ background-repeat: no-repeat;
 .about__title {
   margin-bottom: 32px;
 }
+
+// .about__description {
+// z-index: 100;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   padding: 40px 48px;
+//   background-color: var(--tertiary-text-color);
+//   overflow: hidden;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   transform: translateX(-100%);
+//   transition: transform 500ms var(--anim);
+// }
+
+// .about__description.is-open {
+//   transform: translateX(0);
+// }
+        
+// .about__close-btn {
+// position: absolute;
+//   top: 0;
+//   right: 0;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 30px;
+//   height: 30px;
+//   margin-top: 8px;
+//   margin-right: 8px;
+//   cursor: pointer;
+//   border: 1px solid var(--accent_cl);
+//   border-radius: 50%;
+// }
