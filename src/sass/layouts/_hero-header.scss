@@ -145,6 +145,8 @@
 		& ul{
 			display: flex;
 		}
+		position: relative;
+		z-index: 2;
 	}
 }
 
@@ -205,12 +207,34 @@
 	background-color: var(--product-one_cl);
 	position: relative;
 	height: 502px;
+	&::after {
+		content: "";
+		border-radius: 50%;
+		background-color: var(--accent-light_cl);
+		position: absolute;
+		top: 83px;
+		right: -62px;
+		width: 346px;
+		height: 344px;
+	}
 	@media screen and (min-width:768px) {
 		height: 416px;
+		&::after{
+			top: 43px;
+			right: 185px;
+			width: 335px;
+			height: 333px;
+		}
 	}
 
 	@media screen and (min-width:1200px) {
 		height: 664px;
+		&::after {
+			top: 54px;
+			right: 149px;
+			width: 534px;
+			height: 534px;
+		}
 	}
 }
 
@@ -221,6 +245,7 @@
 	position: absolute;
 	bottom: 0;
 	right: 32px;
+	z-index: 1;
 	@media screen and (min-width:768px){
 		width: 143px;
 		right: 303px;
@@ -263,6 +288,7 @@
 		width: 304px;
 		bottom: 0;
 		right: 16px;
+		z-index: 2;
 	}
 }
 .hero__info{
@@ -283,9 +309,8 @@
 	border: none;
 	background-color: var(--white_cl);
 	border-radius: 22px;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 21px;
+	font-size: 14px;
+	line-height: 18.23px;
 	padding: 9px 14px;
 	color: var(--accent_cl);
 	display: inline-block;
