@@ -30,25 +30,25 @@
 	@media screen and (min-width:768px) {
 		font-size: 22px;
 		line-height: 25px;
+		margin-top: 12px;
 	}
 
 	@media screen and (min-width: 1200px) {
 		font-size: 38px;
 		line-height: 44px;
+		margin-top: 52px;
 	}
 }
 .page-heading__sub-text{
 	color: var(--accent_cl);
-	font-size: 58px;
+	font-size: 48px;
 	line-height: 90.5%;
 	@media screen and (min-width:768px) {
-		font-size: 22px;
-		line-height: 25px;
+		font-size: 34px;
 	}
 	@media screen and (min-width: 1200px) {
-		font-size: 38px;
-		line-height: 44px;
-		}
+		font-size: 58px;
+	}
 }
 // --------------кнопка перемикання мобільного меню--------------//
 .page-header__menu-toggler {
@@ -266,19 +266,17 @@
 	@media screen and (max-width:767px){
 		display: none;
 	}
-	position: absolute;
-	left: 32px;
-	right: 16px;
-	@media screen and (min-width:1200px) {
-		bottom: 60px;
-		left: 16px;
-	}
 }
 .hero__description-img{
 	display: block;
 	width: 152px;
+	position: absolute;
+	bottom: 16px;
+	left: 32px;
 	@media screen and (min-width:1200px) {
 		width: 213px;
+		bottom: 60px;
+		left: 16px;
 	}
 }
 .hero__girl-img{
@@ -290,11 +288,11 @@
 	position: absolute;
 	bottom: 1px;
 	right: 32px;
+	z-index: 2;
 	@media screen and (min-width:1200px) {
 		width: 304px;
 		bottom: 0;
 		right: 16px;
-		z-index: 2;
 	}
 }
 .hero__info{
