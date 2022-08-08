@@ -1,0 +1,140 @@
+.about {
+  background-color: var(--bg-light_cl);
+
+  @media screen and (min-width: 1200px) {
+      background-image: url("../images/about-bg/sectionbg-desc.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 80%;
+    }
+  
+    @media screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+    (-o-min-device-pixel-ratio: 2/1),
+    (min-resolution: 2dppx) {
+      background-image: url("../images/about-bg/sectionbg-desc@2x.png");
+    }
+}
+
+.about__text-title {
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+  }
+}
+
+.about__text {
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+
+  color: var(--txt-light_cl);
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.94;
+  }
+}
+
+.about__btn {
+  width: 176px;
+  height: 44px; 
+  border: none;
+  border-radius: 22px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+  color: var(--accent_cl);
+  background-color: var(--white_cl);
+
+  .btn__icon {
+fill: var(--accent_cl);
+  }
+
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+}
+
+.about__text-title::before {
+  display: block;
+  content: '';
+background-size: contain;
+background-repeat: no-repeat;
+  @media screen and (max-width: 767px) {
+    width: 280px;
+    height: 279px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    background-image: url("../images/about-cow/cow-mob.png");
+  }
+
+  @media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 2dppx) {
+    background-image: url("../images/about-cow/cow-mob@2x.png");
+  }
+
+}
+
+.about__text-thumb {
+  padding-right: 60px;
+
+@media screen and (max-width: 767px) {}
+
+  @media screen and (max-width: 767px) {
+      background-image: url("../images/about-bg/sectionbg-mob.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 80%;
+    }
+  
+    @media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
+    (-o-min-device-pixel-ratio: 2/1),
+    (min-resolution: 2dppx) {
+      background-image: url("../images/about-bg/sectionbg-mob@2x.png");
+    }
+ 
+ 
+}
+
+.about__uppertitle, .about__title {
+  text-align: center;
+}
+
+.about__uppertitle {
+  margin-bottom: 15px;
+}
+
+.about__title {
+  margin-bottom: 32px;
+}
