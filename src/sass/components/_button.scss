@@ -1,0 +1,51 @@
+.btn {
+	padding-left: 23px;
+	padding-right: 23px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+
+	min-width: 107px;
+	max-height: 44px;
+
+	font-family: $main-font;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.13;
+	letter-spacing: 0.03em;
+
+	background-color: transparent;
+
+	border-radius: 20px;
+	cursor: pointer;
+	border: none;
+
+	transition:
+		color $animation-func,
+		background-color $animation-func;
+
+	// на червоному фоні
+	&--red-mode {
+		color: var(--white_cl);
+		background-color: var(--accent_cl);
+	}
+
+	// на світлому фоні
+	&--light-mode {
+		color: var(--accent_cl);
+		background-color: var(--white_cl);
+	}
+
+	// ховер та фокус на червоному фоні
+	&--red-mode:hover,
+	&--red-mode:focus {
+		background-color: var(--accent-dark_cl);
+		outline: transparent;
+	}
+
+	// ховер та фокус на світлому фоні
+	&--light-mode:hover,
+	&--light-mode:focus {
+		background-color: var(--btn-hover_cl);
+		outline: transparent;
+	}
+}
