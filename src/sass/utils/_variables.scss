@@ -2,7 +2,9 @@
 $main-font: 'DM Sans', sans-serif;
 $secondary-font: 'Titan One', cursive;
 /* -------------------------------------------------------------------------- */
+
 $animation-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 /* --------------------------------- Кольори -------------------------------- */
 :root {
   --white_cl: #ffffff;
@@ -11,7 +13,9 @@ $animation-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --accent_cl: #d41443;
   --accent-dark_cl: #d41342;
   --accent-light_cl: #ffa5ba;
-  --mobile-menu-bg:#E17992;
+
+  --mobile-menu-bg: #e17992;
+  --social-links-bg_cl: #fea5bb;
 
   --product-one_cl: #ffb8ca;
   --product-two_cl: #f0d1a5;

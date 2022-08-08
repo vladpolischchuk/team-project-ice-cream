@@ -9,3 +9,4 @@ facebook
 github
 telegram
 arrow-right стрелка для круглых кнопок в секциях Header и Products
+arrow-bracket стрелка для кнопок в секции Contacts
