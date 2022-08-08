@@ -173,8 +173,7 @@
 }
 // --------------Кнопка купити в меню--------------
 .page-header__button-buy {
-	border: none;
-	border-radius: 22px;
+	@extend .btn-light;
 	display: flex;
 	align-items: center;
 	font-weight: 700;
@@ -182,7 +181,6 @@
 	line-height: 21px;
 	margin: 0 20px;
 	padding: 12px 48px 12px 61px;
-	color: var(--accent_cl);
 	transform: translate(0);
 	
 	@media screen and (min-width:768px) and (max-width:1199px) {
@@ -306,16 +304,6 @@
 	}
 }
 .hero__link{
-	border: none;
-	background-color: var(--white_cl);
-	border-radius: 22px;
-	font-size: 14px;
-	line-height: 18.23px;
-	padding: 9px 14px;
-	color: var(--accent_cl);
 	display: inline-block;
-}
-.hero__link--dark{
-	background-color: var(--accent_cl);
-	color: var(--white_cl);
+	margin-right: 12px;
 }
