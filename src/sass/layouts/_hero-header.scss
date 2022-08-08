@@ -21,6 +21,7 @@
 
 // --------------кнопка перемикання мобільного меню--------------//
 .page-header__menu-toggler {
+	z-index: 3;
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
@@ -81,6 +82,7 @@
 
 // --------------контейнер мобільного меню--------------//
 .menu-container {
+	z-index: 2;
 	@media screen and (max-width:1199px) {
 		position: absolute;
 		height: 100vh;
@@ -97,11 +99,15 @@
 		align-items: center;
 		margin-left: auto;
 	}
-}
-
-.menu-container.is-closed {
-	@media screen and (max-width:1199px) {
-		transform: translateX(calc(100% + 20px));
+	&.is-closed {
+		@media screen and (max-width:1199px) {
+			transform: translateX(calc(100% + 20px));
+			transition: transform $animation-func;
+			background-color: transparent;
+			& .navigation{
+				opacity: 0;
+			}
+		}
 	}
 }
 
@@ -172,18 +178,44 @@
 //-------------- Секція Hero --------------//
 .hero {
 	background-color: var(--product-one_cl);
-	overflow: hidden;
+	position: relative;
+	height: 502px;
+	@media screen and (min-width:768px) {
+		height: 416px;
+	}
+
+	@media screen and (min-width:1200px) {
+		height: 664px;
+	}
 }
 
 //--------------Стилі картинок--------------//
 .hero__icecream-img{
 	display: block;
 	width: 171px;
+	position: absolute;
+	bottom: 0;
+	right: 32px;
 	@media screen and (min-width:768px){
 		width: 143px;
+		right: 303px;
 	}
 	@media screen and (min-width:1200px) {
 		width: 236px;
+		bottom: 1px;
+		right: 328px;
+	}
+}
+.hero__description{
+	@media screen and (max-width:1199px){
+		display: none;
+	}
+	position: absolute;
+	left: 32px;
+	right: 16px;
+	@media screen and (min-width:1200px) {
+		bottom: 60px;
+		left: 16px;
 	}
 }
 .hero__description-img{
@@ -194,9 +226,17 @@
 	}
 }
 .hero__girl-img{
+	@media screen and (max-width:1199px) {
+		display: none;
+	}
 	display: block;
 	width: 190px;
+	position: absolute;
+	bottom: 1px;
+	right: 32px;
 	@media screen and (min-width:1200px) {
 		width: 304px;
+		bottom: 0;
+		right: 16px;
 	}
 }
