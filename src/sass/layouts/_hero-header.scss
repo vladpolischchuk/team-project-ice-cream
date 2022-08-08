@@ -18,10 +18,33 @@
 	}
 	position: relative;
 }
+.page-heading{
+	color: var(--white_cl);
+	font-family: $secondary-font;
+	font-size: 26px;
+	line-height: 30px;
+	letter-spacing: 0.04em;
+	margin-top: 52px;
+	position: relative;
+	z-index: 4;
+	@media screen and (min-width:768px) {
+		font-size: 22px;
+		line-height: 25px;
+	}
 
+	@media screen and (min-width: 1200px) {
+		font-size: 38px;
+		line-height: 44px;
+	}
+}
+.page-heading__sub-text{
+	color: var(--accent_cl);
+	font-size: 58px;
+	line-height: 90.5%;
+}
 // --------------кнопка перемикання мобільного меню--------------//
 .page-header__menu-toggler {
-	z-index: 3;
+	z-index: 6;
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
@@ -82,8 +105,8 @@
 
 // --------------контейнер мобільного меню--------------//
 .menu-container {
-	z-index: 2;
 	@media screen and (max-width:1199px) {
+		z-index: 5;
 		position: absolute;
 		height: 100vh;
 		top: 0;
@@ -250,16 +273,24 @@
 .hero__container{
 	position: relative;
 	z-index: 3;
+	display: inline-block;
+	margin-top: 20px;
+	@media screen and (min-width:1200px) {
+		margin-top: 24px;
+	}
 }
 .hero__link{
 	border: none;
 	background-color: var(--white_cl);
 	border-radius: 22px;
-	display: inline-block;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 21px;
 	padding: 9px 14px;
 	color: var(--accent_cl);
-	transform: translate(0);
+	display: inline-block;
+}
+.hero__link--dark{
+	background-color: var(--accent_cl);
+	color: var(--white_cl);
 }
