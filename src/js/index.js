@@ -1,1 +1,2 @@
-require('./mobile-menu');
+import './mobile-menu';
+import './reviews-slider';
