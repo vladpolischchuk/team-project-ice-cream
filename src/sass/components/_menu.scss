@@ -6,7 +6,7 @@
 	cursor: pointer;
 	position: absolute;
 	top: 33px;
-	right: 6px;
+	right: 16px;
 
 	@media screen and (min-width:768px) {
 		top: 53px;
@@ -15,6 +15,7 @@
 		&.is-open {
 			top: 26px;
 			right: 16px;
+			position: fixed;
 		}
 	}
 
@@ -52,20 +53,15 @@
 .menu-container {
 	@media screen and (max-width:1199px) {
 		z-index: 5;
-		position: absolute;
+		position: fixed;
 		height: 100vh;
 		top: 0;
-		right: -12px;
+		right: 20px;
 		background-color: var(--mobile-menu-bg);
 		padding: 60px 0;
 		transform: translateX(20px);
 		transition: transform $animation-func, background-color $animation-func;
 	}
-	@media screen and (max-width:767px) {
-		position: fixed;
-		right: 0;
-	}
-
 	@media screen and (min-width:1200px) {
 		display: flex;
 		flex-direction: row-reverse;
@@ -81,6 +77,8 @@
 			transform: translateX(calc(100% + 20px));
 			transition: transform $animation-func, background-color $animation-func;
 			background-color: transparent;
+			position: absolute;
+			right: -10px;
 
 			& .navigation {
 				opacity: 0;
@@ -109,7 +107,7 @@
 
 		.menu-container.is-closed & {
 			transition: transform $animation-func;
-			transform: translate(-226px, -28px);
+			transform: translate(-228px, -28px);
 			padding: 12px 37px;
 		}
 	}

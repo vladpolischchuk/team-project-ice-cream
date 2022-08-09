@@ -45,14 +45,10 @@
 
 //-------------- Секція Hero --------------//
 .hero {
-	background-color: var(--product-one_cl);
 	position: relative;
 	height: 502px;
 	@media screen and (max-width:1199px){
 		overflow: hidden;
-		.off_overflow &{
-			overflow: initial;
-		}
 	}
 	&::after {
 		content: "";
@@ -84,7 +80,9 @@
 		}
 	}
 }
-
+.hero-bg{
+	background-color: var(--product-one_cl);
+}
 //--------------Стилі картинок--------------//
 .hero__icecream-img{
 	display: block;
@@ -137,6 +135,7 @@
 	position: absolute;
 	bottom: 16px;
 	left: 32px;
+	z-index: 2;
 	@media screen and (max-width:767px){
 		display: none;
 	}
