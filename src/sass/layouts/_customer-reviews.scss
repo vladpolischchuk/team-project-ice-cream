@@ -1,4 +1,9 @@
 // Customer reviews list
+.customer-reviews__list {
+  display: flex;
+  justify-content: center;
+}
+
 .customer-reviews__wrapper {
   margin-left: auto;
   margin-right: auto;
@@ -9,6 +14,16 @@
 
   border-radius: 50%;
   overflow: hidden;
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    margin-bottom: 57px;
+  }
+
+  // PC
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 63px;
+  }
 }
 
 .customer-reviews__group {
@@ -19,6 +34,16 @@
   max-width: 157px;
 
   text-align: center;
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    max-width: 514px;
+  }
+
+  // PC
+  @media screen and (min-width: 1200px) {
+    max-width: 750px;
+  }
 }
 
 .customer-reviews__feedback {
@@ -47,6 +72,51 @@
 
     background-image: url(../images/review/quote.png);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/review/quote@2x.png);
+    }
+
+    // Tablet
+    @media screen and (min-width: 768px) and (max-width: 1199.5px) {
+      top: -17px;
+      left: -44px;
+
+      width: 60px;
+      height: 40px;
+
+      background-image: url(../images/review/quote-tab.png);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/review/quote-tab@2x.png);
+      }
+    }
+
+    // PC
+    @media screen and (min-width: 1200px) {
+      top: -15px;
+      left: -37px;
+    }
+  }
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    margin-bottom: 68px;
+
+    @include get-font-style(normal, 500, 14px, 2.3, 0.04em);
+  }
+
+  // PC
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 75px;
+
+    @include get-font-style(normal, 500, 16px, 2, 0.04em);
   }
 }
 
@@ -68,13 +138,25 @@
     background-image: url(../images/review/circle.svg);
     transform: translateX(-50%);
   }
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+
+    @include get-font-style(normal, 500, 16px, 1.86, 0);
+  }
+
+  // PC
+  @media screen and (min-width: 1200px) {
+    @include get-font-style(normal, 500, 20px, 1.86, 0);
+  }
 }
 
 // Slider
 .slick-dots li button:before {
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
 
   font-family: 'slick';
   font-size: 14px;
@@ -85,7 +167,7 @@
   content: '•';
   text-align: center;
   opacity: 1;
-  color: #D9D9D9;
+  color: #d9d9d9;
 }
 
 .slick-dots li.slick-active button:before {
