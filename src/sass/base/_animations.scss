@@ -24,3 +24,14 @@
     transform: translateX(0);
   }
 }
+
+
+@keyframes slide-top {
+  from {
+    transform: translateY(-5px);
+  }
+
+  to {
+    transform: translateY(5px);
+  }
+}

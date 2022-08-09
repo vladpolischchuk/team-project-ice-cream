@@ -1,3 +1,5 @@
+import './menu-slow-scroll';
 import './mobile-menu';
+import './btn-read-more';
 import './reviews-slider';
-import './about-read-more';
+import './arrow-slider-top';
