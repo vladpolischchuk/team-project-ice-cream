@@ -55,11 +55,15 @@
 		position: absolute;
 		height: 100vh;
 		top: 0;
-		right: 0;
+		right: -12px;
 		background-color: var(--mobile-menu-bg);
 		padding: 60px 0;
 		transform: translateX(20px);
 		transition: transform $animation-func, background-color $animation-func;
+	}
+	@media screen and (max-width:767px) {
+		position: fixed;
+		right: 0;
 	}
 
 	@media screen and (min-width:1200px) {
@@ -70,6 +74,9 @@
 	}
 
 	&.is-closed {
+		@media screen and (max-width:767px){
+			overflow: hidden;
+		}
 		@media screen and (max-width:1199px) {
 			transform: translateX(calc(100% + 20px));
 			transition: transform $animation-func, background-color $animation-func;
@@ -90,7 +97,12 @@
 	margin: 0 20px;
 	padding: 12px 48px 12px 61px;
 	transform: translate(0);
-
+	transition: opacity $animation-func;
+	@media screen and (max-width:767px) {
+			.menu-container.is-closed & {
+				opacity: 0;
+			}
+		}
 	@media screen and (min-width:768px) and (max-width:1199px) {
 		margin: 0 34px;
 		padding: 12px 43px;
@@ -101,7 +113,6 @@
 			padding: 12px 37px;
 		}
 	}
-// --------------Кнопка купити в меню--------------//
 	@media screen and (min-width: 1200px) {
 		margin: 0 0 0 123;
 		padding: 11px 37px;
