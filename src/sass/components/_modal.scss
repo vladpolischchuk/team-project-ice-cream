@@ -1,0 +1,187 @@
+$accent-color: #2196F3;
+$accent-hover: #188CE8;
+$dark-font: #000000;
+$dark-bg: #00000033;
+$light-font: #ffffff;
+$lightness-back: #f5f4fa;
+$font-color: #212121;
+$contact-color: #757575;
+$bg-color: #2F303A;
+$footer-link: rgba(255, 255, 255, 0.6);
+$footer-soclink: rgba(255, 255, 255, 0.1);
+$icon-fill: #afb1b8;
+$time-func: cubic-bezier(0.4, 0, 0.2, 1);
+$logo-font: "Raleway", sans-serif;
+$main-font: "Roboto", sans-serif;
+$owerlay-gradient: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+
+
+.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.modal {
+	position: fixed;
+	display: flex;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $dark-bg;
+	transition: opacity 250ms $time-func;
+
+	@media screen and (max-width:767px) {
+		padding: 15px;
+	}
+}
+
+.modal__content {
+	margin: auto;
+	position: fixed;
+	z-index: 8;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 528px;
+	background-color: $light-font;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	transform: scale(1);
+	transition: transform 250ms $time-func;
+	padding: 40px;
+
+	@media screen and (max-width:1199px) {
+		min-width: 320px;
+		max-width: 450px;
+	}
+}
+
+.modal__close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 30px;
+	height: 30px;
+	background-color: $light-font;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: color 250ms $time-func;
+
+	&:hover {
+		color: $accent-color;
+	}
+}
+
+.modal__title {
+	text-align: center;
+	margin: 0;
+	margin-bottom: 12px;
+
+	@media screen and (max-width:767px) {
+		font-size: 20px;
+		line-height: calc(30/20);
+	}
+}
+
+.modal__filed {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.modal__label {
+	font-size: 12px;
+	line-height: calc(14.06/12);
+	color: $contact-color;
+	letter-spacing: 0.01em;
+	margin-bottom: 4px;
+}
+
+.modal__input {
+	width: 100%;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	padding: 11px 12px;
+	padding-left: 42px;
+	color: $font-color;
+	transition: border 250ms $time-func;
+
+	&:focus {
+		outline: 1px solid $accent-hover;
+		border: 1px solid $accent-color;
+	}
+}
+
+.modal__icon {
+	position: absolute;
+	top: 34px;
+	left: 14px;
+	transition: color 250ms $time-func;
+
+	.modal__input:focus+& {
+		color: $accent-color;
+	}
+}
+
+.modal__input--comment {
+	height: 120px;
+	resize: none;
+	padding: 12px 16px;
+}
+
+.modal__filed--checkbox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.modal__icon-checkbox {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-color: $light-font;
+	border: 2px solid $font-color;
+	background-image: url(/src/images/icons.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 2px;
+	transition: background-color 250ms $time-func, border 250ms $time-func;
+	margin-right: 7px;
+
+	.modal__checkbox:checked+& {
+		background-color: $accent-color;
+		border: 2px solid $accent-color;
+	}
+}
+
+.modal__checkbox-label {
+	color: $contact-color;
+	letter-spacing: 0.03em;
+	line-height: calc(24/14);
+	cursor: pointer;
+
+	@media screen and (max-width:767px) {
+		font-size: 12px;
+		line-height: calc(14.06/12);
+	}
+}
+
+.modal__link {
+	color: $accent-color;
+}
+
+.modal__button {
+	@extend .btn;
+	color: $light-font;
+	margin: 0 auto;
+	display: block;
+}
