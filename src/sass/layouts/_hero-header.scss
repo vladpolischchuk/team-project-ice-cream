@@ -38,7 +38,7 @@
 		font-size: 16px;
 		line-height: 21px;
 	}
-	&:hover {
+	&:hover, &:active, &:focus {
 		color: var(--accent_cl);
 	}
 }
@@ -48,6 +48,9 @@
 	background-color: var(--product-one_cl);
 	position: relative;
 	height: 502px;
+	@media screen and (max-width:767px){
+		overflow: hidden;
+	}
 	&::after {
 		content: "";
 		border-radius: 50%;
