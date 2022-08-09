@@ -1,0 +1,189 @@
+.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.back-drop {
+	position: fixed;
+	display: flex;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--dark-bg);
+	transition: opacity $animation-func;
+	z-index: 7;
+	@media screen and (max-width:767px) {
+		padding: 15px;
+	}
+}
+
+.modal__content {
+	margin: auto;
+	position: fixed;
+	z-index: 8;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 528px;
+	background-color: var(--white_cl);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	transform: scale(1);
+	transition: transform $animation-func;
+	padding: 40px;
+
+	@media screen and (max-width:1199px) {
+		min-width: 320px;
+		max-width: 450px;
+		padding: 20px;
+		padding-top: 35px;
+	}
+}
+
+.modal__close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 30px;
+	height: 30px;
+	background-color: var(--white_cl);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: color $animation-func;
+
+	&:hover {
+		color: var(--accent_cl);
+	}
+}
+
+.modal__title {
+	text-align: center;
+	margin: 0;
+	margin-bottom: 12px;
+	font-size: 16px;
+	line-height: 21px;
+	color: var(--accent_cl);
+	@media screen and (max-width:767px) {
+		font-size: 20px;
+		line-height: calc(30/20);
+	}
+	@media screen and (min-width:1200px) {
+		font-size: 25px;
+		line-height: calc(30/20);
+	}
+}
+
+.modal__filed {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.modal__label {
+	font-size: 12px;
+	line-height: calc(14.06/12);
+	color: var(--txt-light_cl);
+	letter-spacing: 0.01em;
+	margin-bottom: 4px;
+	@media screen and (min-width:1200px) {
+		font-size: 14px;
+	}
+}
+
+.modal__input {
+	width: 100%;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	padding: 11px 12px;
+	padding-left: 42px;
+	color: var(--modal-font-color);
+	transition: border $animation-func;
+	font-size: 14px;
+	@media screen and (min-width:1200px) {
+		font-size: 16px;
+	}
+	&:focus {
+		outline: 1px solid var(--accent_cl);
+		border: 1px solid var(--accent_cl);
+	}
+}
+
+.modal__icon {
+	position: absolute;
+	top: 30px;
+	left: 14px;
+	transition: color $animation-func;
+
+	.modal__input:focus+& {
+		color: var(--accent_cl);
+	}
+	@media screen and (min-width:1200px) {
+		top: 33px;
+	}
+}
+
+.modal__input--comment {
+	height: 50px;
+	resize: none;
+	padding: 12px 16px;
+}
+
+.modal__filed--checkbox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.modal__icon-checkbox {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-color: var(--white_cl);
+	border: 2px solid var(--modal-font-color);
+	border-radius: 2px;
+	transition: background-color $animation-func, border $animation-func;
+	margin-right: 7px;
+
+	.modal__checkbox:checked+& {
+		background-color: var(--accent_cl);
+		border: 2px solid var(--accent_cl);
+	}
+}
+
+.modal__checkbox-label {
+	color: var(--txt-light_cl);
+	letter-spacing: 0.03em;
+	line-height: calc(24/14);
+	cursor: pointer;
+
+	@media screen and (max-width:767px) {
+		font-size: 12px;
+		line-height: calc(14/12);
+	}
+	@media screen and (max-width:1199px) {
+		font-size: 14px;
+		line-height: calc(14/12);
+	}
+}
+
+.modal__link {
+	color: var(--accent_cl);
+}
+
+.modal__button {
+	@extend .btn;
+	color: var(--white_cl);
+	margin: 0 auto;
+	display: block;
+	@media screen and (min-width:1200px) {
+		font-size: 16px;
+	}
+}
