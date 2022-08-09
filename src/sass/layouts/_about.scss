@@ -62,6 +62,14 @@
   }
 }
 
+.about__more-text {
+  display: none;
+}
+
+.about__text.show-more .about__more-text {
+display: inline;
+}
+
 .about__btn {
   width: 176px;
 margin-top: 20px;
