@@ -1,0 +1,238 @@
+// зупиняєм прокрутку якщо відкрито меню (JS)
+.off_overflow{
+	@media screen and (max-width: 1199px){
+		overflow: hidden;
+	}
+}
+
+//--------------Блок навігації--------------//
+.navigation {
+	opacity: 1;
+	transition: opacity $animation-func;
+	@media screen and (max-width:1199px) {
+		margin-top: 19px;
+	}
+	@media screen and (min-width:1200px) {
+		& ul{
+			display: flex;
+		}
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.navigation__link {
+	padding: 12px 18px;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--white_cl);
+	transition: color $animation-func;
+	@media screen and (max-width:1199px) {
+		border: 1px solid #E18298;
+		display: block;
+		padding-left: 20px;
+	}
+	@media screen and (min-width:1200px) {
+		font-size: 16px;
+		line-height: 21px;
+	}
+	&:hover, &:active, &:focus {
+		color: var(--accent_cl);
+	}
+}
+
+//-------------- Секція Hero --------------//
+.hero {
+	background-color: var(--product-one_cl);
+	position: relative;
+	height: 502px;
+	@media screen and (max-width:1199px){
+		overflow: hidden;
+		.off_overflow &{
+			overflow: initial;
+		}
+	}
+	&::after {
+		content: "";
+		border-radius: 50%;
+		background-color: var(--accent-light_cl);
+		position: absolute;
+		top: 83px;
+		right: -62px;
+		width: 346px;
+		height: 344px;
+	}
+	@media screen and (min-width:768px) {
+		height: 416px;
+		&::after{
+			top: 43px;
+			right: 185px;
+			width: 335px;
+			height: 333px;
+		}
+	}
+
+	@media screen and (min-width:1200px) {
+		height: 664px;
+		&::after {
+			top: 54px;
+			right: 149px;
+			width: 534px;
+			height: 534px;
+		}
+	}
+}
+
+//--------------Стилі картинок--------------//
+.hero__icecream-img{
+	display: block;
+	width: 171px;
+	position: absolute;
+	bottom: 0;
+	right: 32px;
+	z-index: 1;
+	@media screen and (min-width:768px){
+		width: 143px;
+		right: 303px;
+	}
+	@media screen and (min-width:1200px) {
+		width: 236px;
+		bottom: 1px;
+		right: 328px;
+	}
+}
+.hero__girl-img {
+	@media screen and (max-width:767px) {
+		display: none;
+	}
+
+	display: block;
+	width: 190px;
+	position: absolute;
+	bottom: 1px;
+	right: 32px;
+	z-index: 2;
+
+	@media screen and (min-width:1200px) {
+		width: 304px;
+		bottom: 0;
+		right: 16px;
+	}
+}
+.hero__description-img {
+	display: inline-block;
+	width: 152px;
+
+	@media screen and (min-width:1200px) {
+		width: 213px;
+	}
+}
+
+.hero__description{
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	position: absolute;
+	bottom: 16px;
+	left: 32px;
+	@media screen and (max-width:767px){
+		display: none;
+	}
+	@media screen and (min-width:1200px){
+		bottom: 60px;
+		left: 16px;
+	}
+}
+.hero__description-text{
+	font-size: 8px;
+	line-height: 1.5;
+	color: var(--white_cl);
+	max-width: 114px;
+	@media screen and (min-width:1200px){
+		font-size: 14px;
+		line-height: 19.6px;
+		max-width: 200px;
+	}
+}
+.hero__description-toggler{
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	min-width: 1px;
+	@media screen and (min-width:1200px) {
+		width: 26px;
+		height: 26px;
+	}
+}
+.hero__info{
+	@media screen and (max-width:767px) {
+		display: none;
+	}
+	font-size: 8px;
+	line-height: 10px;
+	color: var(--white_cl);
+	text-align: right;
+	position: absolute;
+	top: 92px;
+	right: 32px;
+	@media screen and (min-width:1200px) {
+		font-size: 14px;
+		line-height: 18px;
+		top: 156px;
+		right: 34px;
+	}
+}
+.hero__info-category{
+	z-index: 2;
+	font-size: 28px;
+	line-height: 32px;
+	position: relative;
+	&::before{
+		content: "";
+		position: absolute;
+		top: -2px;
+		right: -10px;
+		z-index: -1;
+		background-color: var(--white_cl);
+		border-radius: 50%;
+		width: 16px;
+		height: 16px;
+		@media screen and (min-width:1200px) {
+			top: -4px;
+			right: -18px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+	@media screen and (min-width:1200px) {
+		font-size: 46px;
+		line-height: 53px;
+	}
+}
+.hero__info-item {
+	margin-top: 16px;
+	@media screen and (min-width:1200px) {
+		margin-top: 35px;
+	}
+}
+.hero__container{
+	position: relative;
+	z-index: 3;
+	display: inline-block;
+	margin-top: 20px;
+	@media screen and (min-width:1200px) {
+		margin-top: 24px;
+	}
+}
+.hero__link{
+	display: inline-block;
+	margin-right: 12px;
+	padding: 9px 14px;
+	min-width: 1px;
+}

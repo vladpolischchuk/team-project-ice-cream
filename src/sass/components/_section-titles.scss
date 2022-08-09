@@ -1,0 +1,48 @@
+/* --------------------------------- Titles --------------------------------- */
+.section-uppertitle,
+.section-title,
+.section-subtitle {
+  font-family: $secondary-font;
+  text-transform: uppercase;
+}
+
+.section-uppertitle {
+  @include get-font-style(normal, 400, 18px, 1.16, 0);
+
+  color: var(--accent-light_cl);
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    @include get-font-style(normal, 400, 26px, 1.15, 0.04em);
+  }
+}
+
+.section-subtitle {
+  @include get-font-style(normal, 400, 20px, 1.15, 0.04em);
+
+  color: var(--white_cl);
+}
+
+.section-uppertitle,
+.section-subtitle {
+  // PC
+  @media screen and (min-width: 1200px) {
+    @include get-font-style(normal, 400, 30px, 1.13, 0.04em);
+  }
+}
+
+.section-title {
+  @include get-font-style(normal, 400, 34px, 1.14, 0.04em);
+
+  color: var(--accent_cl);
+
+  // Tablet
+  @media screen and (min-width: 768px) {
+    @include get-font-style(normal, 400, 48px, 1.14, 0.06em);
+  }
+
+  // PC
+  @media screen and (min-width: 1200px) {
+    @include get-font-style(normal, 400, 58px, 1.13, 0.06em);
+  }
+}

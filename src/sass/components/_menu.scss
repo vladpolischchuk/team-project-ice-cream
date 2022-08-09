@@ -1,0 +1,123 @@
+// --------------кнопка перемикання мобільного меню--------------//
+.page-header__menu-toggler {
+	z-index: 6;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	position: absolute;
+	top: 33px;
+	right: 6px;
+
+	@media screen and (min-width:768px) {
+		top: 53px;
+		right: 198px;
+
+		&.is-open {
+			top: 26px;
+			right: 16px;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		display: none;
+	}
+}
+
+.page-header__menu-toggler .page-header__icon-open {
+	opacity: 1;
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	transition: opacity $animation-func;
+}
+
+
+.page-header__menu-toggler .page-header__icon-close {
+	opacity: 0;
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	transition: opacity $animation-func;
+}
+
+.page-header__menu-toggler.is-open .page-header__icon-open {
+	opacity: 0;
+}
+
+.page-header__menu-toggler.is-open .page-header__icon-close {
+	opacity: 1;
+}
+
+// --------------контейнер мобільного меню--------------//
+.menu-container {
+	@media screen and (max-width:1199px) {
+		z-index: 5;
+		position: absolute;
+		height: 100vh;
+		top: 0;
+		right: -12px;
+		background-color: var(--mobile-menu-bg);
+		padding: 60px 0;
+		transform: translateX(20px);
+		transition: transform $animation-func, background-color $animation-func;
+	}
+	@media screen and (max-width:767px) {
+		position: fixed;
+		right: 0;
+	}
+
+	@media screen and (min-width:1200px) {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		margin-left: auto;
+	}
+
+	&.is-closed {
+		@media screen and (max-width:767px){
+			overflow: hidden;
+		}
+		@media screen and (max-width:1199px) {
+			transform: translateX(calc(100% + 20px));
+			transition: transform $animation-func, background-color $animation-func;
+			background-color: transparent;
+
+			& .navigation {
+				opacity: 0;
+			}
+		}
+	}
+}
+.page-header__button-buy {
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 21px;
+	margin: 0 20px;
+	padding: 12px 48px 12px 61px;
+	transform: translate(0);
+	transition: opacity $animation-func;
+	@media screen and (max-width:767px) {
+			.menu-container.is-closed & {
+				opacity: 0;
+			}
+		}
+	@media screen and (min-width:768px) and (max-width:1199px) {
+		margin: 0 34px;
+		padding: 12px 43px;
+
+		.menu-container.is-closed & {
+			transition: transform $animation-func;
+			transform: translate(-226px, -28px);
+			padding: 12px 37px;
+		}
+	}
+	@media screen and (min-width: 1200px) {
+		margin: 0 0 0 123;
+		padding: 11px 37px;
+		font-size: 16px;
+		line-height: 21px;
+		transform: translate(0);
+	}
+}

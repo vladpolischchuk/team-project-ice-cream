@@ -1,0 +1,12 @@
+
+logo-ice - полномасштабное лого фирмы
+logo-mini - логотип без надписи
+burger - кнопка burger для вызова модального меню на небольших экранах
+close - кнопка закрытия модально окна (крестик)
+advant1 advant2 advant3 - иконки секции Advatages
+home - иконка на слайдере с домиком в секции Reviews
+facebook
+github
+telegram
+arrow-right стрелка для круглых кнопок в секциях Header и Products
+arrow-bracket стрелка для кнопок в секции Contacts
