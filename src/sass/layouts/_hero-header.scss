@@ -48,8 +48,11 @@
 	background-color: var(--product-one_cl);
 	position: relative;
 	height: 502px;
-	@media screen and (max-width:767px){
+	@media screen and (max-width:1199px){
 		overflow: hidden;
+		.off_overflow &{
+			overflow: initial;
+		}
 	}
 	&::after {
 		content: "";
