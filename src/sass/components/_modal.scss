@@ -112,7 +112,7 @@
 		outline: 1px solid var(--accent_cl);
 		border: 1px solid var(--accent_cl);
 	}
-	&:invalid.modal__input:focus.modal__input:not(.modal__input:placeholder-shown){
+	.modal__form:not(.modal__form:focus-within) &:invalid{
 		animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
 	}
 }
@@ -121,17 +121,20 @@
 	10%,
 	90% {
 		transform: translate3d(-1px, 0, 0);
+		border-color: var(--accent_cl);
 	}
 
 	20%,
 	80% {
 		transform: translate3d(2px, 0, 0);
+		border-color: var(--accent_cl);
 	}
 
 	30%,
 	50%,
 	70% {
 		transform: translate3d(-4px, 0, 0);
+		border-color: var(--accent_cl);
 	}
 
 	40%,
@@ -180,6 +183,9 @@
 	.modal__checkbox:checked+& {
 		background-color: var(--accent_cl);
 		border: 2px solid var(--accent_cl);
+	}
+	.modal__form:not(.modal__form:focus-within) .modal__checkbox:invalid+& {
+		animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
 	}
 }
 
