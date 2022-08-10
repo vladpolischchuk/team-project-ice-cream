@@ -1,6 +1,11 @@
-import './menu-slow-scroll';
-import './mobile-menu';
-import './btn-read-more';
-import './reviews-slider';
-import './arrow-slider-top';
 import './hero-description-slider.js';
+
+import './menu-slow-scroll';
+
+import './mobile-menu';
+
+import './btn-read-more';
+
+import './reviews-slider';
+
+import './arrow-slider-top';
