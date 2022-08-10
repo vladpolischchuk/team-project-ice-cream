@@ -39,7 +39,7 @@
 		padding-top: 35px;
 	}
 	&.is-hidden{
-		transition: transform $animation-func;
+		transition: transform $animation-func, opacity $animation-func;
 		transform: rotate(80deg);
 		opacity: 0;
 		pointer-events: none;
