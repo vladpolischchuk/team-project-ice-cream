@@ -1,14 +1,14 @@
 .about {
-  max-width: 1200px;
-  margin: 0 auto;
+ 
   background-color: var(--bg-light_cl);
 
   @media screen and (min-width: 1200px) {
     background-image: url("../images/about-bg/sectionbg-desc.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 50% 80%;
+    background-position: 50% 110%;
     position: relative;
+    background-size: 100%;
   }
 
   @media screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
@@ -20,6 +20,12 @@
   @media screen and (max-width: 1199px) {
     background-image: none;
   }
+
+  
+}
+
+.about__container {
+  position: relative;
 }
 
 .about__text-title {
@@ -69,6 +75,7 @@
 .about__text.show-more .about__more-text {
 display: inline;
 }
+
 
 .about__btn {
   width: 176px;
@@ -133,8 +140,8 @@ margin-top: 20px;
 
     @media screen and (min-width: 1200px) {
       position: absolute;
-      left: 22px;
-      bottom: 50px;
+      left: 12px;
+      bottom: -60px;
       width: 501px;
       height: 501px;
       background-image: url("../images/about-cow/cow-desc.png");
@@ -205,40 +212,3 @@ margin-top: 20px;
   }
 
 }
-
-// .about__description {
-// z-index: 100;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   padding: 40px 48px;
-//   background-color: var(--tertiary-text-color);
-//   overflow: hidden;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   transform: translateX(-100%);
-//   transition: transform 500ms var(--anim);
-// }
-
-// .about__description.is-open {
-//   transform: translateX(0);
-// }
-
-// .about__close-btn {
-// position: absolute;
-//   top: 0;
-//   right: 0;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 30px;
-//   height: 30px;
-//   margin-top: 8px;
-//   margin-right: 8px;
-//   cursor: pointer;
-//   border: 1px solid var(--accent_cl);
-//   border-radius: 50%;
-// }
