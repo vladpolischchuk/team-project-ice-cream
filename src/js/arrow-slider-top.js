@@ -1,13 +1,14 @@
-function backToTop() {
-    let button = $('.scroll-to-top');
+(() => {
+    let button = document.querySelector('.scroll-to-top');
 
-    $(window).on('scroll', () => {
-        if ($(this).scrollTop() >= 100) {
-            button.fadeIn();
+    window.addEventListener('scroll', function(e) {
+
+        if (window.scrollY>=150) {
+            button.classList.add("is-hidden");
         } else {
-            button.fadeOut();
+            button.classList.remove("is-hidden");
         }
-    });
-}
+        });
 
-backToTop();
+
+})();
