@@ -20,8 +20,8 @@
     border: none;
 
     transition: 
-        color $animation-func,
-        background-color $animation-func;
+        color $anim-slow-one,
+        background-color $anim-slow-one;
 
     // на червоному фоні
     &--red-mode {
