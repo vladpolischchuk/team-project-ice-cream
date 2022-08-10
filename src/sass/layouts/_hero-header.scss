@@ -82,6 +82,7 @@
 }
 .hero-bg{
 	background-color: var(--product-one_cl);
+	min-width: 320px;
 }
 //--------------Стилі картинок--------------//
 .hero__icecream-img{
@@ -148,11 +149,13 @@
 	font-size: 8px;
 	line-height: 1.5;
 	color: var(--white_cl);
-	max-width: 114px;
+	width: 114px;
+	min-height: 50px;
 	@media screen and (min-width:1200px){
 		font-size: 14px;
 		line-height: 19.6px;
-		max-width: 200px;
+		width: 200px;
+		min-height: 80px;
 	}
 }
 .hero__description-toggler{
@@ -167,6 +170,15 @@
 	@media screen and (min-width:1200px) {
 		width: 26px;
 		height: 26px;
+	}
+}
+.hero__description-card{
+	position: relative;
+	min-height: 50px;
+	margin-bottom: 3px;
+	@media screen and (min-width:1200px) {
+		min-height: 80px;
+		margin-bottom: 18px;
 	}
 }
 .hero__info{
@@ -232,6 +244,11 @@
 .hero__link{
 	display: inline-block;
 	margin-right: 12px;
-	padding: 9px 14px;
-	min-width: 1px;
+	text-align: center;
+	@media screen and (max-width:1199px) {
+		padding: 9px 14px;
+		min-width: 1px;
+		font-size: 8px;
+		line-height: calc(10.42/8);
+	}
 }
