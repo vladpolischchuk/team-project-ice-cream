@@ -169,6 +169,37 @@
 		height: 26px;
 	}
 }
+.hero__description-card{
+	position: relative;
+}
+.hero__description-slide{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.show-first .hero__description-slide{
+	&--first{
+		transform: translateX(0);
+		opacity: 1;
+		z-index: 3;
+	}
+	&--two {}
+	&--three {}
+}
+.show-two .hero__description-slide {
+	&--first {}
+
+	&--two {}
+
+	&--three {}
+}
+.show-three .hero__description-slide {
+	&--first {}
+
+	&--two {}
+
+	&--three {}
+}
 .hero__info{
 	@media screen and (max-width:767px) {
 		display: none;
