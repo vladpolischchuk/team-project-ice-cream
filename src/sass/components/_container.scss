@@ -1,17 +1,26 @@
 .container {
-  @include margin(0, auto, 0, auto);
-  @include padding(0, 20px, 0, 20px);
+  margin: 0 auto;
+  padding: 0 20px;
 
-  @media screen and (max-width: 767px) {
+  // Mobile
+  @media screen and (max-width: 767.5px) {
     min-width: 320px;
     max-width: 100%;
   }
 
+  // Tablet
   @media screen and (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+
     width: 768px;
   }
 
+  // PC
   @media screen and (min-width: 1200px) {
+    padding-left: 16px;
+    padding-right: 16px;
+
     width: 1200px;
   }
 }
