@@ -7,7 +7,9 @@
 	position: absolute;
 	top: 33px;
 	right: 16px;
-
+	&.is-open {
+		z-index: 10;
+	}
 	@media screen and (min-width:768px) {
 		top: 53px;
 		right: 198px;
@@ -16,7 +18,6 @@
 			top: 26px;
 			right: 16px;
 			position: fixed;
-			z-index: 10;
 		}
 	}
 
