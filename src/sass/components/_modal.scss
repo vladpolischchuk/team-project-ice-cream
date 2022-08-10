@@ -1,8 +1,3 @@
-.is-hidden {
-	opacity: 0;
-	pointer-events: none;
-}
-
 .back-drop {
 	position: fixed;
 	display: flex;
@@ -15,6 +10,10 @@
 	z-index: 7;
 	@media screen and (max-width:767px) {
 		padding: 15px;
+	}
+	&.is-hidden {
+		opacity: 0;
+		pointer-events: none;
 	}
 }
 
@@ -32,12 +31,18 @@
 	transform: scale(1);
 	transition: transform $animation-func;
 	padding: 40px;
-
+	transform-origin: bottom left;
 	@media screen and (max-width:1199px) {
 		min-width: 320px;
 		max-width: 450px;
 		padding: 20px;
 		padding-top: 35px;
+	}
+	&.is-hidden{
+		transition: transform $animation-func;
+		transform: rotate(80deg);
+		opacity: 0;
+		pointer-events: none;
 	}
 }
 
@@ -73,7 +78,7 @@
 		line-height: calc(30/20);
 	}
 	@media screen and (min-width:1200px) {
-		font-size: 25px;
+		font-size: 22px;
 		line-height: calc(30/20);
 	}
 }
@@ -112,8 +117,36 @@
 		outline: 1px solid var(--accent_cl);
 		border: 1px solid var(--accent_cl);
 	}
+	.modal__form:not(.modal__form:focus-within) &:invalid{
+		animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	}
 }
+@keyframes shake {
 
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+		border-color: var(--accent_cl);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+		border-color: var(--accent_cl);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+		border-color: var(--accent_cl);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
 .modal__icon {
 	position: absolute;
 	top: 30px;
@@ -155,6 +188,9 @@
 	.modal__checkbox:checked+& {
 		background-color: var(--accent_cl);
 		border: 2px solid var(--accent_cl);
+	}
+	.modal__form:not(.modal__form:focus-within) .modal__checkbox:invalid+& {
+		animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
 	}
 }
 

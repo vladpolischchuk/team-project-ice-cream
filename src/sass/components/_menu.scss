@@ -1,6 +1,6 @@
 // --------------кнопка перемикання мобільного меню--------------//
 .page-header__menu-toggler {
-	z-index: 6;
+	z-index: 3;
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
@@ -16,6 +16,7 @@
 			top: 26px;
 			right: 16px;
 			position: fixed;
+			z-index: 10;
 		}
 	}
 
@@ -52,7 +53,7 @@
 // --------------контейнер мобільного меню--------------//
 .menu-container {
 	@media screen and (max-width:1199px) {
-		z-index: 5;
+		z-index: 9;
 		position: fixed;
 		height: 100vh;
 		top: 0;
