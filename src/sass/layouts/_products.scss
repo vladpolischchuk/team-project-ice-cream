@@ -63,10 +63,10 @@
 }
 
 &__item{
-
+  overflow-x: clip;
   position: relative;
   display: inline-block;
-  height: 100%px;
+  height: 100%;
 
   @media screen and (max-width: 767px) {
       max-width: 280px;
