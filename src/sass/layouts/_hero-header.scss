@@ -4,7 +4,9 @@
 		overflow: hidden;
 	}
 }
-
+.logo{
+	display: inline-block;
+}
 //--------------Блок навігації--------------//
 .navigation {
 	opacity: 1;
@@ -47,6 +49,8 @@
 .hero {
 	position: relative;
 	height: 502px;
+	margin-top: -70px;
+	padding-top: 194px;
 	@media screen and (max-width:1199px){
 		overflow: hidden;
 	}
@@ -61,6 +65,8 @@
 		height: 344px;
 	}
 	@media screen and (min-width:768px) {
+		margin-top: -94px;
+		padding-top: 102px;
 		height: 416px;
 		&::after{
 			top: 43px;
@@ -71,18 +77,28 @@
 	}
 
 	@media screen and (min-width:1200px) {
+		margin-top: -86px;
+		padding-top: 147px;
 		height: 664px;
 		&::after {
 			top: 54px;
 			right: 149px;
 			width: 534px;
 			height: 534px;
+			opacity: 0;
+			transform: scale(0.8) translate(0, 0);
+			animation-duration: $hero-anim-time;
+			animation-name: loaded;
+			animation-delay: $hero-anim-delay;
+			animation-fill-mode: forwards;
 		}
 	}
 }
 .hero-bg{
 	background-color: var(--product-one_cl);
 	min-width: 320px;
+	max-width: 100vw;
+	overflow-x: clip;
 }
 //--------------Стилі картинок--------------//
 .hero__icecream-img{
@@ -106,14 +122,18 @@
 	@media screen and (max-width:767px) {
 		display: none;
 	}
-
 	display: block;
 	width: 190px;
 	position: absolute;
 	bottom: 1px;
 	right: 32px;
 	z-index: 2;
-
+	transform: translate(250px, -80px);
+	opacity: 0;
+	animation-duration: $hero-anim-time;
+	animation-name: loaded;
+	animation-delay: $hero-anim-delay;
+	animation-fill-mode: forwards;
 	@media screen and (min-width:1200px) {
 		width: 304px;
 		bottom: 0;
@@ -137,12 +157,25 @@
 	bottom: 16px;
 	left: 32px;
 	z-index: 2;
+	transform: translate(-200px, -50px);
+	opacity: 0;
+	animation-duration: $hero-anim-time;
+	animation-name: loaded;
+	animation-delay: $hero-anim-delay;
+	animation-fill-mode: forwards;
 	@media screen and (max-width:767px){
 		display: none;
 	}
 	@media screen and (min-width:1200px){
 		bottom: 60px;
 		left: 16px;
+	}
+}
+@keyframes loaded {
+	20%{opacity: 0;}
+	100%{
+		transform: scale(1) translate(0, 0);
+		opacity: 1;
 	}
 }
 .hero__description-text{
@@ -192,6 +225,11 @@
 	position: absolute;
 	top: 92px;
 	right: 32px;
+	opacity: 0;
+	animation-duration: $hero-anim-time;
+	animation-name: loaded;
+	animation-delay: $hero-anim-delay;
+	animation-fill-mode: forwards;
 	@media screen and (min-width:1200px) {
 		font-size: 14px;
 		line-height: 18px;
@@ -228,6 +266,12 @@
 }
 .hero__info-item {
 	margin-top: 16px;
+	transform: translate(200px, -80px);
+	opacity: 0;
+	animation-duration: $hero-anim-time;
+	animation-name: loaded;
+	animation-delay: $hero-anim-delay;
+	animation-fill-mode: forwards;
 	@media screen and (min-width:1200px) {
 		margin-top: 35px;
 	}
@@ -237,6 +281,12 @@
 	z-index: 3;
 	display: inline-block;
 	margin-top: 20px;
+	transform: scale(0.8) translate(-180px, -40px);
+	opacity: 0;
+	animation-duration: $hero-anim-time;
+	animation-name: loaded;
+	animation-delay: $hero-anim-delay;
+	animation-fill-mode: forwards;
 	@media screen and (min-width:1200px) {
 		margin-top: 24px;
 	}

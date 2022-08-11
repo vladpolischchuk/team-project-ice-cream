@@ -58,7 +58,7 @@
 		position: fixed;
 		height: 100vh;
 		top: 0;
-		right: 20px;
+		right: 0;
 		background-color: var(--mobile-menu-bg);
 		padding: 60px 0;
 		transform: translateX(20px);
@@ -119,5 +119,6 @@
 		font-size: 16px;
 		line-height: 21px;
 		transform: translate(0);
+		z-index: 5;
 	}
 }
