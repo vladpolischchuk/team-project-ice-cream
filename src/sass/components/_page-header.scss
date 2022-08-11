@@ -1,11 +1,13 @@
 .page-header {
-	padding: 8px 0;
+	padding: 8px 20px;
 	overflow-x: clip;
 	@media screen and (min-width:768px) {
 		padding-top: 32px;
+		padding-left: 32px;
 	}
 	@media screen and (min-width: 1200px) {
-		padding-top: 32px;
+		padding-top: 37px;
+		padding-left: 16px;
 		padding-bottom: 0;
 		display: flex;
 	}

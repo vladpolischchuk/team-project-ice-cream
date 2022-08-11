@@ -12,7 +12,7 @@
 	}
 	@media screen and (min-width:768px) {
 		top: 53px;
-		right: 198px;
+		right: 208px;
 
 		&.is-open {
 			top: 26px;
@@ -58,7 +58,7 @@
 		position: fixed;
 		height: 100vh;
 		top: 0;
-		right: 0;
+		right: 20px;
 		background-color: var(--mobile-menu-bg);
 		padding: 60px 0;
 		transform: translateX(20px);
@@ -97,19 +97,19 @@
 	margin: 0 20px;
 	padding: 12px 48px 12px 61px;
 	transform: translate(0);
-	transition: opacity $animation-func;
-	@media screen and (max-width:767px) {
+	transition: opacity $animation-func, color $animation-func, background-color $animation-func;
+	@media screen and (max-width:767.5px) {
 			.menu-container.is-closed & {
 				opacity: 0;
 			}
 		}
-	@media screen and (min-width:768px) and (max-width:1199px) {
+	@media screen and (min-width:768px) and (max-width:1199.5px) {
 		margin: 0 34px;
 		padding: 12px 43px;
 
 		.menu-container.is-closed & {
 			transition: transform $animation-func;
-			transform: translate(-228px, -28px);
+			transform: translate(-248px, -27px);
 			padding: 12px 37px;
 		}
 	}
