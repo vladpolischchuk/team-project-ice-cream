@@ -34,6 +34,9 @@
         z-index: 2;
         visibility: visible;
         opacity: 1;
+        transition: height $anim-slow, 
+        visibility $anim-slow-one,
+        opacity $animation-func;
     }
 }
 
