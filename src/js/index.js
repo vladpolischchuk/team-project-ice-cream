@@ -1,8 +1,8 @@
+import './mobile-menu';
+
 import './easytoggler';
 
 import './menu-slow-scroll';
-
-import './mobile-menu';
 
 import './arrow-slider-top';
 

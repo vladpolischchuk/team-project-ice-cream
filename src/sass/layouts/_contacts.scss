@@ -1,15 +1,23 @@
 .contacts {
-  background-image: linear-gradient(to bottom, #FFFFFF 25%, #fff5f6 25%);
-
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(to bottom, #FFFFFF 24%, #fff5f6 24%);
+  }
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(to bottom, #FFFFFF 50%, #fff5f6 50%);
   }
   @media screen and (min-width: 1200px) {
-    background-image: linear-gradient(to bottom, #FFFFFF 22%, #fff5f6 15%);
+    background-image: linear-gradient(to bottom, #FFFFFF 20%, #fff5f6 20%);
+  }
+
+  &__container {
+    @media screen and (min-width: 768px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
   }
 }
 
-.card-list {
+.cards-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -17,160 +25,168 @@
   margin-bottom: 32px;
 
   @media screen and (min-width: 768px) {
-    gap: 32px;  
+    margin-bottom: 60px;
+    gap: 32;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 60px;
   }
 }
-.card {
+
+.cards {
   background-color: #ffffff;
   max-width: 280px;
+  height: 412px;
   padding: 40px 32px;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 
   @media screen and (min-width: 768px) {
     max-width: 224px;
+    height: 528px;
   }
   @media screen and (min-width: 1200px) {
     max-width: 368px;
+    height: 538px;
   }
 }
 
-.card__name,
-.card__time,
-.card__sity,
-.card__day,
-.card__text,
-.card__phone,
-.card__mail {
-  font-weight: 500;
-  font-size: 12px;
-}
-
-
-.card__name {
-  text-align: center;
+.cards__name {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   color: #ffffff;
   margin-bottom: 20px;
-
   border-radius: 6px;
+  @media screen and (min-width: 768px) {
+    height: 28px;
+    margin-bottom: 32px;
+  }
   &--cafe {
-    background-color: #f0d1a5;
     width: 80px;
-
+    background-color: #f0d1a5;
     @media screen and (min-width: 768px) {
       width: 73px;
     }
   }
   &--foodtruck {
-    background-color: #c2e297;
     width: 130px;
-
+    background-color: #c2e297;
     @media screen and (min-width: 768px) {
       width: 138px;
     }
   }
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 32px;
-    font-size: 16px;
-  }
 }
 
-
-.card__name,
-.card__time,
-.card__sity,
-.card__day {
-  line-height: 1.86;
+.cards__name,
+.cards__sity,
+.cards__text,
+.cards__day,
+.cards__time,
+.cards__phone,
+.cards__mail {
+  font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.04em;
+  line-height: 186%;
 }
 
-.card__text,
-.card__phone,
-.card__mail {
-  line-height: 1.5;
-  color: #907e82;
-  text-decoration: none;
-}
-
-.card__day,
-.card__time,
-.card__text,
-.card__phone,
-.card__mail {
-  @media screen and (min-width: 767px) {
-    font-size: 14px;
+.cards__name {
+  @media screen and (min-width: 768px) {
+   font-size: 16px;
   }
 }
 
-.card__sity {
-  margin-bottom: 8px;
-
-  @media screen and (min-width: 767px) and (max-width: 1200px){
-    margin-bottom: 12px;
+.cards__sity,
+.cards__text,
+.cards__day,
+.cards__time,
+.cards__phone,
+.cards__mail {
+  @media screen and (min-width: 768px) {
     font-size: 14px;
-  }
+   }
 }
 
-.card__location {
+.cards__time {
+  color: var(--accent-light_cl);
+}
+
+.cards__text,
+.cards__phone,
+.cards__mail {
+  line-height: 150%;
+  color: var(--txt-light_cl);
+}
+
+.cards__text {
+  @media screen and (min-width: 768px) {
+    line-height: 166%;
+   }
+}
+
+.cards__phone,
+.cards__mail {
+  @media screen and (min-width: 768px) {
+    line-height: 183%;
+   }
+}
+
+.cards__sity,
+.cards__text,
+.cards__day,
+.cards__time,
+.cards__phone,
+.cards__mail {
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+   }
+}
+
+.cards__text {
+  @media screen and (min-width: 1200px) {
+    line-height: 183%;
+   }
+}
+
+.cards__location {
   padding-bottom: 24px;
   border-bottom: 1px solid #e1e1e1;
-
   @media screen and (min-width: 768px) {
     padding-bottom: 32px;
   }
 }
-
-.card__text {
-  max-width: 179px;
-
-  @media screen and (min-width: 768px) {
-    max-width: 159px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 243px;
-  }
+.cards__sity {
+  margin-bottom: 8px;
 }
 
-.card__time,
-.card__sity,
-.card__day,
-.card__text,
-.card__phone,
-.card__mail {
-  font-size: 16px;
-}
-
-.card__timetable {
+.cards__timetable {
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #e1e1e1;
-
   @media screen and (min-width: 768px) {
     padding-top: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 20px;
   }
 }
 
-.card__time {
+.cards__time {
   color: #ffa5ba;
   display: block;
 }
 
-.card__time--one {
+.cards__time--margin {
   margin-bottom: 8px;
-
   @media screen and (min-width: 768px) {
-    padding-bottom: 12px;
+    margin-bottom: 12px;
   }
 }
 
-.card__contact {
+.cards__contact {
   display: flex;
   flex-direction: column;
   padding-top: 24px;
-
   @media screen and (min-width: 768px) {
     padding-top: 32px;
   }
