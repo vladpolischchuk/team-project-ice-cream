@@ -97,7 +97,7 @@
 	margin: 0 20px;
 	padding: 12px 48px 12px 61px;
 	transform: translate(0);
-	transition: opacity $animation-func;
+	transition: opacity $animation-func, color $animation-func, background-color $animation-func;
 	@media screen and (max-width:767px) {
 			.menu-container.is-closed & {
 				opacity: 0;
