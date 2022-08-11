@@ -1,13 +1,30 @@
 .gallery{
+    height: 100%;
+    width: 100%;
+    // padding-top: 60px;
 
+    @media screen and(max-width: 767px) {
+        background-image: linear-gradient(to bottom,
+                var(--bg-light_cl) 35%,
+                var(--white_cl) 35%,
+                var(--white_cl) 100%);
+    }
+        
+    @media screen and(min-width: 768px) and (max-width: 1199px) {
+        background-image: linear-gradient(to bottom,
+                var(--bg-light_cl) 56%,
+                var(--white_cl) 56%,
+                var(--white_cl) 100%);
+    }
+        
+    @media screen and(min-width: 1200px) {
+        background-image: linear-gradient(to bottom,
+                var(--bg-light_cl) 30%,
+                var(--white_cl) 30%,
+                var(--white_cl) 100%);
+    }
 
     &__grid {
-        // max-height: 100%;
-        // max-width: 100%;
-        height: 100%;
-        width: 100%;
-            
-        padding-top: 60px;
 
         display: grid;
         align-items: center;
@@ -15,42 +32,26 @@
         
         @media screen and(max-width: 767px) {
             grid-gap: 2px;
-            grid: repeat(30, 2.6px) / repeat(70, 2.6px);
-            background-image: linear-gradient(to bottom,
-                var(--bg-light_cl) 47%,
-                var(--white_cl) 47%,
-                var(--white_cl) 100%
-            );
+            grid: repeat(30, 2.028px) / repeat(70, 2.02px);
         }
 
         @media screen and(min-width: 768px) and (max-width: 1199px) {
             grid-gap: 5px;
-            grid: repeat(30, 6px) / repeat(70, 6px);
-
-            background-image: linear-gradient(to bottom,
-            var(--bg-light_cl) 36%,
-            var(--white_cl) 36%,
-            var(--white_cl) 100%
-            );        
+            grid: repeat(30, 5.128px) / repeat(70, 5.12px);
         }
         @media screen and(min-width: 1200px) {
             grid-gap: 8px;
             grid: repeat(30, 6.6px) / repeat(70, 6.6px);
-
-            background-image: linear-gradient(to bottom,
-                var(--bg-light_cl) 33%,
-                var(--white_cl) 33%,
-                var(--white_cl) 100%
-            );
         }
     }
 }
 
 .gallery__photo {
     overflow: hidden;
-    
-    border-radius: 8px;
-    @media screen and(min-width: 768px){
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+
+    border-radius: 20px;
+    @media screen and(max-width: 767px){
         border-radius: 8px;
     }
 
@@ -83,5 +84,10 @@
     }
     &:nth-child(10) {
         grid-area: 12 / 61 / span 10 / span 10;
+    }
+
+    &:hover,
+    &:focus{
+        transform: scale(1.4) rotateY(180deg);
     }
 }
