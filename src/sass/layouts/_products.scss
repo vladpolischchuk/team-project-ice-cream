@@ -141,10 +141,26 @@
 &__animation-milkshake
  {
   z-index: 3;
-  width: 368px;
   height: 394px;
   position: absolute;
   cursor: pointer;
+
+  
+  @media screen and (max-width: 767px) {
+    width: 280px;
+    height: 489px;
+    margin-top: 140px;
+  }
+
+  @media screen and (min-width: 768px) {
+   width: 224px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 368px;
+    height: 535px;
+    margin-top: 261px;
+  }
 }
 
 &__item  &__animation-ice::after {

@@ -25,9 +25,9 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 528px;
-	background-color: var(--white_cl);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
+	background-color: #ebccd3;
+	box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.12), 2px 4px 5px rgba(0, 0, 0, 0.14), 2px 4px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 20px;
 	transform: scale(1);
 	transition: transform $animation-func;
 	padding: 40px;
@@ -48,21 +48,25 @@
 
 .modal__close {
 	position: absolute;
-	top: 8px;
-	right: 8px;
+	top: 0;
+	right: 0;
 	width: 30px;
 	height: 30px;
-	background-color: var(--white_cl);
+	color: var(--white_cl);
+	background-color: var(--accent-light_cl);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-	transition: color $animation-func;
+	transition: color $anim-slow-one,
+	background-color $anim-slow-one;
+	transform: translate(25%,-25%);
 
 	&:hover {
 		color: var(--accent_cl);
+		background-color: var(--white_cl);
 	}
 }
 
@@ -97,16 +101,18 @@
 	letter-spacing: 0.01em;
 	margin-bottom: 4px;
 	@media screen and (min-width:1200px) {
-		font-size: 14px;
+		font-size: 16px;
 	}
 }
 
 .modal__input {
 	width: 100%;
-	border: 1px solid rgba(33, 33, 33, 0.2);
+	margin-top: 5px;
+	border: 1px solid transparent;
 	border-radius: 4px;
 	padding: 11px 12px;
 	padding-left: 42px;
+	background-color: var(--white_cl);
 	color: var(--modal-font-color);
 	transition: border $animation-func;
 	font-size: 14px;
@@ -121,43 +127,15 @@
 		animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
 	}
 }
-@keyframes shake {
 
-	10%,
-	90% {
-		transform: translate3d(-1px, 0, 0);
-		border-color: var(--accent_cl);
-	}
-
-	20%,
-	80% {
-		transform: translate3d(2px, 0, 0);
-		border-color: var(--accent_cl);
-	}
-
-	30%,
-	50%,
-	70% {
-		transform: translate3d(-4px, 0, 0);
-		border-color: var(--accent_cl);
-	}
-
-	40%,
-	60% {
-		transform: translate3d(4px, 0, 0);
-	}
-}
 .modal__icon {
 	position: absolute;
-	top: 30px;
+	top: 35px;
 	left: 14px;
 	transition: color $animation-func;
 
 	.modal__input:focus+& {
 		color: var(--accent_cl);
-	}
-	@media screen and (min-width:1200px) {
-		top: 33px;
 	}
 }
 
@@ -180,9 +158,9 @@
 	width: 16px;
 	height: 16px;
 	background-color: var(--white_cl);
-	border: 2px solid var(--modal-font-color);
+	border: 2px solid var(--white_cl);
 	border-radius: 2px;
-	transition: background-color $animation-func, border $animation-func;
+	transition: background-color $animation-func, border-color $animation-func;
 	margin-right: 7px;
 
 	.modal__checkbox:checked+& {
@@ -222,4 +200,13 @@
 	@media screen and (min-width:1200px) {
 		font-size: 16px;
 	}
+}
+
+.modal__input--country {
+	padding-left: 14px;
+}
+
+.modal__decor {
+	font-size: 16px;
+	color: var(--accent_cl);
 }

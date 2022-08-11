@@ -83,25 +83,50 @@
 
         <ul class="button">
             <li class="button-section">
-                <button class="btn btn--red-mode button-togler" type="button" easy-toggle="#button-down"
+                <button class="btn btn--red-mode button-togler contacts__btn contacts__btn--efects" type="button" easy-toggle="#button-down"
                     easy-class="show" easy-rcoe>Our
                     Locations
-                    <svg class="btn__icon" width="4.43px" height="8px">
+                    <svg class="btn__icon" width="8" height="10">
                         <use href="./images/icons.svg#arrow-bracket"></use>
                     </svg>
                 </button>
-                <div id="button-down" class="button-menu">
-                    <a href="https://goo.gl/maps/Rka1aZAJ4TVvM2ba7" class="button-link">Chicago</a>
-                    <a href="https://goo.gl/maps/tugE3xE7oRU2fVa37" class="button-link">Los Angeles</a>
-                    <a href="https://goo.gl/maps/NustKq6asmCYhvBp9" class="button-link">New York</a>
-                    <a href="https://goo.gl/maps/rxD1DUKxV2z3s1E58" class="button-link">Lviv</a>
-                    <a href="https://goo.gl/maps/MmcbgWiRiJNHbgvLA" class="button-link">Kyiv</a>
-                    <a href="https://goo.gl/maps/kQQ4WiNp7x6g41m26" class="button-link">Kharkiv</a>
-                </div>
+                <ul id="button-down"  class="button-menu">
+                    <li class="button-menu__item button-menu__item--one">
+                        <a href="https://goo.gl/maps/Rka1aZAJ4TVvM2ba7" class="button-link" target="_blank"
+                        rel="noreferrer noopener" aria-label="Chicago">Chicago</a>
+                    </li>
+                    <li class="button-menu__item button-menu__item--two">
+                        <a href="https://goo.gl/maps/tugE3xE7oRU2fVa37" class="button-link"
+                        target="_blank"
+                            rel="noreferrer noopener" aria-label="Los Angeles">Los Angeles</a>
+                    </li>
+                    <li class="button-menu__item button-menu__item--tree">
+                        <a href="https://goo.gl/maps/NustKq6asmCYhvBp9" class="button-link"
+                        target="_blank"
+                            rel="noreferrer noopener" aria-label="New York">New York</a>
+                    </li>
+                    <li class="button-menu__item button-menu__item--four">
+                        <a href="https://goo.gl/maps/rxD1DUKxV2z3s1E58" class="button-link"
+                        target="_blank"
+                            rel="noreferrer noopener" aria-label="Lviv">Lviv</a>
+                    </li>
+                    <li class="button-menu__item button-menu__item--five">
+                        <a href="https://goo.gl/maps/MmcbgWiRiJNHbgvLA" class="button-link"
+                        target="_blank"
+                            rel="noreferrer noopener" aria-label="Kyiv">Kyiv</a>
+                    </li>
+                    <li class="button-menu__item button-menu__item--six">
+                        <a href="https://goo.gl/maps/kQQ4WiNp7x6g41m26" class="button-link"
+                        target="_blank"
+                            rel="noreferrer noopener" aria-label="Kharkiv">Kharkiv</a>
+                    </li>
+                </ul>
+              
             </li>
-            <li class="button-section"><button class="btn btn--light-mode" type="button" data-modal-open
+            <li class="button-section">
+                <button class="btn btn--light-mode contacts__btn" type="button" data-modal-open
                     data-id="modal-data-map">Franchise
-                    <svg class="btn__icon" width="4.43px" height="8px">
+                    <svg class="btn__icon btn__icon--franchise" width="8" height="10">
                         <use href="./images/icons.svg#arrow-bracket"></use>
                     </svg>
                 </button>
@@ -109,10 +134,10 @@
         </ul>
     </div>
     <div class="modal__content is-hidden" modal-data-map>
-        <h2 class="modal__title">Questionnaire for a franchisee candidate</h2>
+        <h2 class="modal__title">Become a franchisee!</h2>
         <form class="modal__form" action="#">
             <label class="modal__filed">
-                <span class="modal__label">First name, surname</span>
+                <span class="modal__label">First name, surname <span class="modal__decor">*</span></span>
                 <input class="modal__input" type="text" name="first-name"
                     title="Enter in format 'Name', minimum 3 character" placeholder="First name, surname"
                     pattern="[A-Z][a-z]{2,}" required />
@@ -122,13 +147,7 @@
             </label>
 
             <label class="modal__filed">
-                <span class="modal__label">Desired city (country) opening</span>
-                <textarea class="modal__input modal__input--comment" name="comment" cols="30" rows="10"
-                    placeholder="Enter City"></textarea>
-            </label>
-
-            <label class="modal__filed">
-                <span class="modal__label">Phone</span>
+                <span class="modal__label">Phone <span class="modal__decor">*</span></span>
                 <input class="modal__input" type="tel" name="phone" title="Enter in format '+380-00-00-00-000'"
                     placeholder="+380-00-00-00-000" pattern="^\+380-[0-9][0-9]-[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9]"
                     required />
@@ -138,12 +157,19 @@
             </label>
 
             <label class="modal__filed">
-                <span class="modal__label">E-mail</span>
+                <span class="modal__label">E-mail <span class="modal__decor">*</span></span>
                 <input class="modal__input" type="email" name="mail" title="Enter in format: example32@post.com"
                     placeholder="example32@post.com" pattern="^[\w]{2,}@[a-z]+\.[a-z]{2,4}" required />
                 <svg class="modal__icon email" width="18" height="18">
                     <use href="./images/icons.svg#icon-email"></use>
                 </svg>
+            </label>
+
+            <label class="modal__filed">
+                <span class="modal__label">City (country) opening <span class="modal__decor">*</span></span>
+                <input class="modal__input modal__input--country" type="text" name="country"
+                    title="Enter minimum 3 character" placeholder="Your city"
+                    pattern="[A-Z][a-z]{2,}" required />
             </label>
 
             <label class="modal__filed modal__filed--checkbox">
@@ -160,7 +186,7 @@
             <button class="modal__button btn btn--red-mode" type="submit">SUBMIT</button>
         </form>
         <button class="modal__close" type="button" data-modal-close>
-            <svg class="modal__close-icon" width="18" height="18">
+            <svg class="modal__close-icon modal__close-icon--styles" width="18" height="18">
                 <use href="./images/icons.svg#hide"></use>
             </svg>
         </button>

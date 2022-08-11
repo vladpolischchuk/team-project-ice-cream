@@ -193,8 +193,9 @@
 }
 .button {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  column-gap: 10px;
+  gap: 10;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
@@ -207,9 +208,30 @@
     gap: 12px;
   }
 }
-.btn--red-mode .btn__icon {
-  fill: #ffffff;
+
+.contacts__btn {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
 }
-.btn--light-mode .btn__icon {
-  fill: #d41443;
+
+.btn__icon {
+  margin-left: 13px;
+}
+
+.btn__icon--franchise {
+  --color1: var(--accent_cl);
+}
+
+.cards__phone,
+.cards__mail {
+  transition: color $animation-func;
+}
+
+.cards__phone:hover,
+.cards__mail:hover,
+.cards__phone:focus,
+.cards__mail:focus {
+  color: var(--accent_cl);
 }
