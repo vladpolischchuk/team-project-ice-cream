@@ -4,36 +4,48 @@
 	@media screen and (min-width:768px) {
 		padding-top: 32px;
 	}
-
 	@media screen and (min-width: 1200px) {
 		padding-top: 32px;
 		padding-bottom: 0;
 		display: flex;
 	}
-
+	animation-duration: $hero-anim-time+0.2s;
+	animation-name: loaded-heder;
 	position: relative;
 }
-
+@keyframes loaded-heder {
+	0% {
+		opacity: 0;
+		transform: translateY(-180px);
+	}
+	40%{opacity: 0;}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 .page-heading {
 	color: var(--white_cl);
 	font-family: $secondary-font;
 	font-size: 26px;
 	line-height: 30px;
 	letter-spacing: 0.04em;
-	margin-top: 52px;
 	position: relative;
 	z-index: 4;
-
+	transform: scale(0.8) translate(-180px, -40px);
+	opacity: 0;
+	animation-duration: $hero-anim-time;
+	animation-name: loaded;
+	animation-delay: $hero-anim-delay;
+	animation-fill-mode: forwards;
 	@media screen and (min-width:768px) {
 		font-size: 22px;
 		line-height: 25px;
-		margin-top: 12px;
 	}
 
 	@media screen and (min-width: 1200px) {
 		font-size: 38px;
 		line-height: 44px;
-		margin-top: 52px;
 	}
 }
 
