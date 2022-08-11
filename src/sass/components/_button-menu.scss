@@ -29,7 +29,7 @@
     visibility $anim-slow-one,
     opacity $animation-func;
 
-    &.show {
+    &.is-hidden {
         height: 300px;
         z-index: 2;
         visibility: visible;
@@ -47,7 +47,7 @@
   transition: transform $anim-slow;
 }
 
-.button-menu.show  {
+.button-menu.is-hidden  {
     .button-menu__item--one {
         transform: translateY(54px);
     }
