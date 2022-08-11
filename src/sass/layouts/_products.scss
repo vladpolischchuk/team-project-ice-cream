@@ -63,7 +63,7 @@
 }
 
 &__item{
-
+  cursor: pointer;
     position: relative;
     display: inline-block;
     height: 100%px;
@@ -140,84 +140,182 @@
     display: block;
     top: 0px;
     left: 0;
+    // cursor: pointer;
     position: absolute;
-    background-image: url(../images/products/product1-desc.png);
-   
-
+    transform-origin: center;
+    
+    
     @media screen and (max-width: 767px) {
         width: 280px;
         height: 280px;
         background-size: 280px 280px;
-      }
 
+        background-image: url(../images/products/product1-mob.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        
+          background-image: url(../images/products/product1-mob@2x.png)
+    }
+    }
+  
       @media screen and (min-width: 768px) {
         width: 224px;
         height: 224px;
         background-size: 224px 224px;
+
+        
+        background-image: url(../images/products/product1-tab.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        
+          background-image: url(../images/products/product1-tab@2x.png)
       }
+    }
 
       @media screen and (min-width: 1200px) {
         width: 368px;
         height: 394px;
         background-size: 368px 394px;
+
+        
+        background-image: url(../images/products/product1-desc.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        
+          background-image: url(../images/products/product1-desc@2x.png)
       }
 }  
+      }
 
+      &__item > &__block-ice:hover::after,
+      &__item > &__block-ice:focus::after,
+      &__item &__block-coffee:hover::after,
+      &__item &__block-coffee:focus::after,
+      &__item &__block-milkshake:hover::after,
+      &__item &__block-milkshake:focus::after
+       {
+        animation: rotateY 1500ms infinite alternate ease-in-out;
+        perspective: 400px;
+      }
+
+      
 &__item &__block-coffee::after {
     content: "";
     display: block;
     top: 0px;
     left: 0;
+    // cursor: pointer;
     position: absolute;
-    background-image: url(../images/products/product2-desc.png);
+    transform-origin: center;
+
    
 
     @media screen and (max-width: 767px) {
         width: 280px;
         height: 280px;
         background-size: 280px 280px;
+
+        background-image: url(../images/products/product2-mob.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        
+          background-image: url(../images/products/product2-mob@2x.png)
       }
+    }
 
       @media screen and (min-width: 768px) {
         width: 224px;
         height: 224px;
         background-size: 224px 224px;
+
+        background-image: url(../images/products/product2-tab.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        
+          background-image: url(../images/products/product2-tab@2x.png)
       }
+    }
 
       @media screen and (min-width: 1200px) {
         width: 368px;
         height: 394px;
         background-size: 368px 394px;
+
+        background-image: url(../images/products/product2-desc.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        
+          background-image: url(../images/products/product2-desc@2x.png)
       }
 }   
-
+      }
 &__item &__block-milkshake::after {
     content: "";
     display: block;
     top: 0px;
     left: 0;
+    // cursor: pointer;
     position: absolute;
-    background-image: url(../images/products/product3-desc.png);
+    transform-origin: center;
    
 
     @media screen and (max-width: 767px) {
         width: 280px;
         height: 280px;
         background-size: 280px 280px;
+
+        background-image: url(../images/products/product3-mob.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        
+          background-image: url(../images/products/product3-mob@2x.png)
       }
+    }
 
       @media screen and (min-width: 768px) {
         width: 224px;
         height: 224px;
         background-size: 224px 224px;
+
+        background-image: url(../images/products/product3-tab.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        
+          background-image: url(../images/products/product3-tab@2x.png)
       }
+    }
 
       @media screen and (min-width: 1200px) {
         width: 368px;
         height: 394px;
         background-size: 368px 394px;
+
+        background-image: url(../images/products/product3-desc.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        
+          background-image: url(../images/products/product3-desc@2x.png)
       }
 }  
+}
 
 &__list {
     display: flex;
@@ -286,69 +384,10 @@
 }
 }
 
+
 // .products__block-ice:hover::after {
    
 //     transform: translateX(-100px);
     
 //   }
 
-@-webkit-keyframes swing {
-  15% {
-    -webkit-transform: translateX(9px);
-    transform: translateX(9px);
-  }
-  30% {
-    -webkit-transform: translateX(-9px);
-    transform: translateX(-9px);
-  }
-  40% {
-    -webkit-transform: translateX(6px);
-    transform: translateX(6px);
-  }
-  50% {
-    -webkit-transform: translateX(-6px);
-    transform: translateX(-6px);
-  }
-  65% {
-    -webkit-transform: translateX(3px);
-    transform: translateX(3px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@keyframes swing {
-  15% {
-    -webkit-transform: translateX(9px);
-    transform: translateX(9px);
-  }
-  30% {
-    -webkit-transform: translateX(-9px);
-    transform: translateX(-9px);
-  }
-  40% {
-    -webkit-transform: translateX(6px);
-    transform: translateX(6px);
-  }
-  50% {
-    -webkit-transform: translateX(-6px);
-    transform: translateX(-6px);
-  }
-  65% {
-    -webkit-transform: translateX(3px);
-    transform: translateX(3px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-.swing:hover {
-  -webkit-animation: swing 0.6s ease;
-  animation: swing 0.6s ease;
-   -webkit-animation-iteration-count: 1;
-   animation-iteration-count: 1;
-}
