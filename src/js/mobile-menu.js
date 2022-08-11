@@ -15,7 +15,7 @@
 	refs.togglerMenu.addEventListener("click", toggleMenu);
 
 	refs.openModal.forEach(item => {
-		item.addEventListener("click", () => { toggleModal("[" + item.dataset.id + "]") });
+		item.addEventListener("click", () => { toggleModal("[" + item.dataset.id + "]", (item.dataset.overlay===undefined?true:false)) });
 	});
 	refs.closeModal.forEach(item => {
 		item.addEventListener("click", backDropClick);
@@ -37,11 +37,16 @@
 		
 	}
 
-	function toggleModal(modalData) {
+	function toggleModal(modalData, modal) {
 		closeMenu();
 		document.querySelector(modalData).classList.toggle("is-hidden");
-		refs.backDrop.classList.toggle("is-hidden");
-		document.body.classList.toggle("off_overflow");
+		if (modal) {
+			refs.backDrop.dataset.overlay = true;
+			refs.backDrop.classList.toggle("is-hidden");
+			document.body.classList.toggle("off_overflow");
+		} else {
+			refs.backDrop.dataset.overlay = false;
+		}
 		if (refs.backDrop.dataset.opened == modalData) {
 			refs.backDrop.dataset.opened = "none";
 		} else {
@@ -54,7 +59,7 @@
 			closeMenu();
 		} else {
 			closeMenu();
-			toggleModal(id);
+			toggleModal(id, refs.backDrop.dataset.overlay);
 		}
 
 	}
