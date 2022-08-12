@@ -1,7 +1,5 @@
 import './mobile-menu';
 
-import './easytoggler';
-
 import './menu-slow-scroll';
 
 import './arrow-slider-top';
