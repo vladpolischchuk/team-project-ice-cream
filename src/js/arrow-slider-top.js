@@ -1,5 +1,5 @@
 (() => {
-    let button = document.querySelector('.scroll-to-top');
+    let button = document.querySelector('.btn-scroll-top');
 
     window.addEventListener('scroll', function(e) {
 
