@@ -1,3 +1,4 @@
+// Button for scroll to top
 (() => {
     let button = document.querySelector('.btn-scroll-top');
 

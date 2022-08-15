@@ -1,12 +1,12 @@
 .contacts {
-  @media screen and (max-width: 767px) {
-    background-image: linear-gradient(to bottom, #FFFFFF 24%, #fff5f6 24%);
+  @media screen and (max-width: 767.5px) {
+    background-image: linear-gradient(to bottom, #ffffff 24%, #fff5f6 24%);
   }
   @media screen and (min-width: 768px) {
-    background-image: linear-gradient(to bottom, #FFFFFF 50%, #fff5f6 50%);
+    background-image: linear-gradient(to bottom, #ffffff 50%, #fff5f6 50%);
   }
   @media screen and (min-width: 1200px) {
-    background-image: linear-gradient(to bottom, #FFFFFF 20%, #fff5f6 20%);
+    background-image: linear-gradient(to bottom, #ffffff 20%, #fff5f6 20%);
   }
 
   &__container {
@@ -17,6 +17,7 @@
   }
 }
 
+// List for contacts
 .cards-list {
   display: flex;
   flex-wrap: wrap;
@@ -94,7 +95,7 @@
 
 .cards__name {
   @media screen and (min-width: 768px) {
-   font-size: 16px;
+    font-size: 16px;
   }
 }
 
@@ -106,7 +107,7 @@
 .cards__mail {
   @media screen and (min-width: 768px) {
     font-size: 14px;
-   }
+  }
 }
 
 .cards__time {
@@ -123,14 +124,14 @@
 .cards__text {
   @media screen and (min-width: 768px) {
     line-height: 166%;
-   }
+  }
 }
 
 .cards__phone,
 .cards__mail {
   @media screen and (min-width: 768px) {
     line-height: 183%;
-   }
+  }
 }
 
 .cards__sity,
@@ -141,13 +142,13 @@
 .cards__mail {
   @media screen and (min-width: 1200px) {
     font-size: 16px;
-   }
+  }
 }
 
 .cards__text {
   @media screen and (min-width: 1200px) {
     line-height: 183%;
-   }
+  }
 }
 
 .cards__location {

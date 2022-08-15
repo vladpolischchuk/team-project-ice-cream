@@ -1,8 +1,3 @@
-/* ------------------ Size cards ----------------- */
-@mixin size-Cards($number) {
-  flex-basis: calc((100% - (30px * $number)) / $number);
-}
-
 /* -------------------------------- Margin -------------------------------- */
 @mixin margin($top, $right, $bottom, $left) {
   margin-top: $top;
@@ -20,8 +15,7 @@
 }
 
 // Fonts
-@mixin get-font-style($fstyle, $fweight, $fsize, $lheight, $lspasing) {
-  font-style: $fstyle;
+@mixin get-font-style($fweight, $fsize, $lheight, $lspasing) {
   font-weight: $fweight;
   font-size: $fsize;
   line-height: $lheight;

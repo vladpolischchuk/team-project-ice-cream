@@ -2,7 +2,7 @@ import './mobile-menu';
 
 import './menu-slow-scroll';
 
-import './arrow-slider-top';
+import './btn-scroll-top';
 
 import './hero-description-slider.js';
 

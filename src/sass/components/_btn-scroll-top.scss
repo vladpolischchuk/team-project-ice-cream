@@ -1,3 +1,4 @@
+// Button for scroll to top
 .btn-scroll-top {
   position: fixed;
   bottom: 90px;
@@ -23,7 +24,7 @@
     visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   animation: slide-top 1s linear 2s infinite alternate both;
 
-  // Hover and focus efects
+  // Hover & focus efects
   &:hover,
   &:focus {
     background-color: #f30c46;

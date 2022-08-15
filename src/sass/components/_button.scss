@@ -1,51 +1,50 @@
+// Styles for button
 .btn {
-    padding-left: 23px;
-    padding-right: 23px;
-    padding-top: 13px;
-    padding-bottom: 13px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 13px;
+  padding-bottom: 13px;
 
-    min-width: 107px;
-    max-height: 44px;
+  min-width: 107px;
+  max-height: 44px;
 
-    font-family: $main-font;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.13;
-    letter-spacing: 0.03em;
-   
-    background-color: transparent;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.13;
+  letter-spacing: 0.03em;
 
-    border-radius: 20px;
-    cursor: pointer;
-    border: none;
+  background-color: transparent;
 
-    transition: 
-        color $anim-slow-one,
-        background-color $anim-slow-one;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
 
-    // на червоному фоні
-    &--red-mode {
-        color: var(--white_cl);
-        background-color: var(--accent_cl);  
-    }
+  transition: color $anim-slow-one, background-color $anim-slow-one;
 
-    // на світлому фоні
-    &--light-mode {
-        color: var(--accent_cl);
-        background-color: var(--white_cl);
-    }
+  // на червоному фоні
+  &--red-mode {
+    color: var(--white_cl);
+    background-color: var(--accent_cl);
+  }
 
-    // ховер та фокус на червоному фоні
-    &--red-mode:hover,
-    &--red-mode:focus {
-        background-color: var(--accent-dark_cl);
-        outline: transparent;
-    }
+  // на світлому фоні
+  &--light-mode {
+    color: var(--accent_cl);
+    background-color: var(--white_cl);
+  }
 
-    // ховер та фокус на світлому фоні
-    &--light-mode:hover,
-    &--light-mode:focus {
-        background-color: var(--btn-hover_cl);
-        outline: transparent;
-    }
+  // ховер та фокус на червоному фоні
+  &--red-mode:hover,
+  &--red-mode:focus {
+    background-color: var(--accent-dark_cl);
+    outline: transparent;
+  }
+
+  // ховер та фокус на світлому фоні
+  &--light-mode:hover,
+  &--light-mode:focus {
+    background-color: var(--btn-hover_cl);
+    outline: transparent;
+  }
 }
