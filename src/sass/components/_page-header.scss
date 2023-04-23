@@ -1,31 +1,40 @@
 .page-header {
 	padding: 8px 20px;
+
 	@media screen and (min-width:768px) {
 		padding-top: 32px;
 		padding-left: 32px;
 	}
+
 	@media screen and (min-width: 1200px) {
 		padding-top: 37px;
 		padding-left: 16px;
 		padding-bottom: 0;
 		display: flex;
 	}
+
 	animation-duration: $hero-anim-time+0.2s;
 	animation-name: loaded-heder;
 	position: relative;
 }
+
 @keyframes loaded-heder {
 	0% {
 		opacity: 0;
 		transform: translateY(-180px);
 	}
-	40%{opacity: 0;}
+
+	40%{
+		opacity: 0;
+	}
+
 	100% {
 		opacity: 1;
 		transform: translateY(0);
 	}
 }
-.page-heading {
+
+.page-hero {
 	color: var(--white_cl);
 	font-family: $secondary-font;
 	font-size: 26px;
@@ -50,7 +59,7 @@
 	}
 }
 
-.page-heading__sub-text {
+.page-hero__sub-text {
 	color: var(--accent_cl);
 	font-size: 48px;
 	line-height: 90.5%;

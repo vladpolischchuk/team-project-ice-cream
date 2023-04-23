@@ -1,8 +1,5 @@
 .products {
   display: block;
-  // * {
-  //     outline: 1px solid red;
-  // }
 
   @media screen and (max-width: 767px) {
       margin-top: 60px;
@@ -20,9 +17,10 @@
   }
 
 &__section-title {
-  text-align: center;
   margin-bottom: 8px;
   margin-top: 0px;
+
+  text-align: center;
 
   @media screen and (min-width: 768px) {
       margin-bottom: 20px;
@@ -30,9 +28,10 @@
 }
 
 &__section-uppertitle {
-  text-align: center;
   margin-bottom: 15px;
   display: block;
+
+  text-align: center;
 
   @media screen and (min-width: 768px) {
       margin-bottom: 18px;
@@ -44,10 +43,10 @@
 }
 
 &__section-subtitle {
+  position: relative;
   margin-top: 160px;
   padding-bottom: 32px;
   margin-bottom: 32px;
-  position: relative;
 
   @media screen and (max-width: 767px) {
       padding-top: 160px;
@@ -63,9 +62,10 @@
 }
 
 &__item{
-  overflow-x: clip;
   position: relative;
   display: inline-block;
+  overflow-x: clip;
+ 
   height: 100%;
 
   @media screen and (max-width: 767px) {
@@ -86,30 +86,34 @@
 &__block-ice,
 &__block-coffee,
 &__block-milkshake {
-  text-align: center;
-  background-color: var(--product-one_cl);
   flex-direction: column;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
+
+  background-color: var(--product-one_cl);
+  text-align: center;
   border-radius: 24px;
  
   @media screen and (max-width: 767px) {
       max-width: 280px;
       height: 489px;
+
       margin-top: 140px;
     }
 
     @media screen and (min-width: 768px) {
       max-width: 224px;
       height: 473px;
+
       margin-top: 138px;
     }
 
     @media screen and (min-width: 1200px) {
       max-width: 368px;
       height: 535px;
+
       margin-top: 261px;
     }
 }
@@ -123,15 +127,17 @@
 }
 
 &__section-subtitle::after {
-  width: 26px;
-  height: 6px;
+  content: "";
+  position: absolute;
+  left: 45%;
+  display: block;
   margin-top: 32px;
   margin-bottom: 32px;
+
+  width: 26px;
+  height: 6px;
+
   background-size: 26px 6px;
-  content: "";
-  display: block;
-  left: 45%;
-  position: absolute;
   background-image: url(../images/products/dots.svg);
 }
 
@@ -140,11 +146,11 @@
 &__animation-coffee,
 &__animation-milkshake
  {
-  z-index: 3;
-  height: 394px;
   position: absolute;
-  cursor: pointer;
+  z-index: 3;
 
+  height: 394px;
+  cursor: pointer;
   
   @media screen and (max-width: 767px) {
     width: 280px;
@@ -162,27 +168,25 @@
 }
 
 &__item  &__animation-ice::after {
-  z-index: 2;
   content: "";
-  display: block;
+  position: absolute;
   top: 0px;
   left: 0;
-  // cursor: pointer;
-  position: absolute;
+  z-index: 2;
+  display: block;
+ 
   transform-origin: center;
-  
   
   @media screen and (max-width: 767px) {
       width: 280px;
       height: 280px;
-      background-size: 280px 280px;
 
+      background-size: 280px 280px;
       background-image: url(../images/products/product1-mob.png);
   
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      
         background-image: url(../images/products/product1-mob@2x.png)
   }
   }
@@ -190,15 +194,13 @@
     @media screen and (min-width: 768px) {
       width: 224px;
       height: 224px;
-      background-size: 224px 224px;
 
-      
+      background-size: 224px 224px;
       background-image: url(../images/products/product1-tab.png);
   
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      
         background-image: url(../images/products/product1-tab@2x.png)
     }
   }
@@ -206,15 +208,13 @@
     @media screen and (min-width: 1200px) {
       width: 368px;
       height: 394px;
-      background-size: 368px 394px;
 
-      
+      background-size: 368px 394px;
       background-image: url(../images/products/product1-desc.png);
   
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      
         background-image: url(../images/products/product1-desc@2x.png)
     }
 }  
@@ -225,9 +225,7 @@
     &__animation-coffee:hover::after,
     &__animation-coffee:focus::after,
     &__animation-milkshake:hover::after,
-    &__animation-milkshake:focus::after
-    
-     {
+    &__animation-milkshake:focus::after {
       animation: rotateY 1500ms infinite alternate ease-in-out;
       perspective: 400px;
     }
@@ -235,25 +233,23 @@
     
 &__item &__animation-coffee::after {
   content: "";
-  display: block;
+  position: absolute;
   top: 0px;
   left: 0;
-  position: absolute;
-  transform-origin: center;
+  display: block;
 
- 
+  transform-origin: center;
 
   @media screen and (max-width: 767px) {
       width: 280px;
       height: 280px;
+      
       background-size: 280px 280px;
-
       background-image: url(../images/products/product2-mob.png);
   
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      
         background-image: url(../images/products/product2-mob@2x.png)
     }
   }
@@ -261,14 +257,13 @@
     @media screen and (min-width: 768px) {
       width: 224px;
       height: 224px;
-      background-size: 224px 224px;
 
+      background-size: 224px 224px;
       background-image: url(../images/products/product2-tab.png);
   
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      
         background-image: url(../images/products/product2-tab@2x.png)
     }
   }
@@ -276,39 +271,36 @@
     @media screen and (min-width: 1200px) {
       width: 368px;
       height: 394px;
-      background-size: 368px 394px;
 
+      background-size: 368px 394px;
       background-image: url(../images/products/product2-desc.png);
   
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      
         background-image: url(../images/products/product2-desc@2x.png)
     }
 }   
     }
 &__item &__animation-milkshake::after {
   content: "";
-  display: block;
+  position: absolute;
   top: 0px;
   left: 0;
-  // cursor: pointer;
-  position: absolute;
-  transform-origin: center;
+  display: block;
  
+  transform-origin: center;
 
   @media screen and (max-width: 767px) {
       width: 280px;
       height: 280px;
-      background-size: 280px 280px;
 
+      background-size: 280px 280px;
       background-image: url(../images/products/product3-mob.png);
   
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      
         background-image: url(../images/products/product3-mob@2x.png)
     }
   }
@@ -316,14 +308,13 @@
     @media screen and (min-width: 768px) {
       width: 224px;
       height: 224px;
-      background-size: 224px 224px;
 
+      background-size: 224px 224px;
       background-image: url(../images/products/product3-tab.png);
   
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      
         background-image: url(../images/products/product3-tab@2x.png)
     }
   }
@@ -331,14 +322,13 @@
     @media screen and (min-width: 1200px) {
       width: 368px;
       height: 394px;
-      background-size: 368px 394px;
 
+      background-size: 368px 394px;
       background-image: url(../images/products/product3-desc.png);
   
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      
         background-image: url(../images/products/product3-desc@2x.png)
     }
 }  
@@ -348,32 +338,36 @@
   display: flex;
   
   @media screen and (max-width: 767px) {
-   flex-direction: column;
-   align-items: center;
-    }
+    flex-direction: column;
+    align-items: center;
+  }
 
-    @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-    }
+  }
 }
 
 &__btn {
-  transition: 
-  color $anim-slow-one,
-  background-color $anim-slow-one;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
+  
+  color: var(--accent_cl);
+  
   width: 40px;
   height: 40px;
+
   border-radius: 50%;
   border: transparent;
-  margin-bottom: 40px;
-  color: var(--accent_cl);
+  
+  cursor: pointer;
+  transition: 
+  color $anim-slow-one,
+  background-color $anim-slow-one;
 
     @media screen and (min-width: 1200px) {
       margin-bottom: 60px;
@@ -390,10 +384,3 @@
   border: transparent;
 }
 }
-
-
-// .products__block-ice:hover::after {
- 
-//     transform: translateX(-100px);
-  
-//   }

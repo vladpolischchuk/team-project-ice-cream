@@ -1,344 +1,390 @@
 // зупиняєм прокрутку якщо відкрито меню (JS)
-.off_overflow{
-	@media screen and (max-width: 1199.5px){
-		overflow: hidden;
-	}
+.off_overflow {
+  @media screen and (max-width: 1199.5px) {
+    overflow: hidden;
+  }
 }
-.logo{
-	display: inline-block;
-	position: relative;
-	z-index: 2;
+
+.logo {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
 }
+
 //--------------Блок навігації--------------//
 .navigation {
-	opacity: 1;
-	transition: opacity $animation-func;
-	@media screen and (max-width:1199.5px) {
-		margin-top: 19px;
-	}
-	@media screen and (min-width:1200px) {
-		& ul{
-			display: flex;
-		}
-		position: relative;
-		z-index: 2;
-	}
+  opacity: 1;
+  transition: opacity $animation-func;
+  @media screen and (max-width: 1199.5px) {
+    margin-top: 19px;
+  }
+  @media screen and (min-width: 1200px) {
+    & ul {
+      display: flex;
+    }
+    position: relative;
+    z-index: 2;
+  }
 }
 
 .navigation__link {
-	display: inline-block;
-	padding: 12px 18px;
-	
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 18px;
+  display: inline-block;
+  padding: 12px 18px;
 
-	color: var(--white_cl);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
 
-	transition: color $animation-func;
-	@media screen and (max-width:1199.5px) {
-		border: 1px solid #E18298;
-		display: block;
-		padding-left: 20px;
-	}
-	@media screen and (min-width:1200px) {
-		font-size: 16px;
-		line-height: 21px;
-	}
-	&:hover, &:active, &:focus {
-		color: var(--accent_cl);
-	}
+  color: var(--white_cl);
+
+  transition: color $animation-func;
+
+  @media screen and (max-width: 1199.5px) {
+    border: 1px solid #e18298;
+    display: block;
+    padding-left: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--accent_cl);
+  }
 }
 
 //-------------- Секція Hero --------------//
 .hero {
-	margin-top: -70px;
-	padding-top: 194px;
+  margin-top: -70px;
+  padding-top: 194px;
 
-	position: relative;
+  position: relative;
 
-	height: 502px;
-	@media screen and (max-width:1199.5px){
-		overflow: hidden;
-	}
-	&::after {
-		content: "";
-		position: absolute;
-		top: 83px;
-		right: -62px;
+  height: 502px;
+  @media screen and (max-width: 1199.5px) {
+    overflow: hidden;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 83px;
+    right: -62px;
 
-		width: 346px;
-		height: 344px;
+    width: 346px;
+    height: 344px;
 
-		border-radius: 50%;
-		background-color: var(--accent-light_cl);
-	}
-	@media screen and (min-width:768px) {
-		margin-top: -94px;
-		padding-top: 102px;
+    border-radius: 50%;
+    background-color: var(--accent-light_cl);
+  }
 
-		height: 416px;
-		&::after{
-			top: 43px;
-			right: 185px;
+  @media screen and (min-width: 768px) {
+    margin-top: -94px;
+    padding-top: 102px;
 
-			width: 335px;
-			height: 333px;
-		}
-	}
+    height: 416px;
 
-	@media screen and (min-width:1200px) {
-		margin-top: -86px;
-		padding-top: 147px;
+    &::after {
+      top: 43px;
+      right: 185px;
 
-		height: 664px;
-		&::after {
-			top: 54px;
-			right: 149px;
+      width: 335px;
+      height: 333px;
+    }
+  }
 
-			width: 534px;
-			height: 534px;
+  @media screen and (min-width: 1200px) {
+    margin-top: -86px;
+    padding-top: 147px;
 
-			opacity: 0;
-			transform: scale(0.8) translate(0, 0);
-			animation-duration: $hero-anim-time;
-			animation-name: loaded;
-			animation-delay: $hero-anim-delay;
-			animation-fill-mode: forwards;
-		}
-	}
+    height: 664px;
+
+    &::after {
+      top: 54px;
+      right: 149px;
+
+      width: 534px;
+      height: 534px;
+
+      opacity: 0;
+      transform: scale(0.8) translate(0, 0);
+      animation-duration: $hero-anim-time;
+      animation-name: loaded;
+      animation-delay: $hero-anim-delay;
+      animation-fill-mode: forwards;
+    }
+  }
 }
-.hero-bg{
-	min-width: 320px;
-	max-width: 100vw;
-	
-	overflow-x: clip;
-	background-color: var(--product-one_cl);
+
+.hero-bg {
+  min-width: 320px;
+  max-width: 100vw;
+
+  overflow-x: clip;
+  background-color: var(--product-one_cl);
 }
+
 //--------------Стилі картинок--------------//
-.hero__icecream-img{
-	position: absolute;
-	bottom: 0;
-	right: 32px;
-	z-index: 1;
-	display: block;
+.hero__icecream-img {
+  position: absolute;
+  bottom: 0;
+  right: 32px;
+  z-index: 1;
+  display: block;
 
-	width: 171px;
-	
-	@media screen and (min-width:768px){
-		width: 143px;
-		right: 303px;
-	}
-	@media screen and (min-width:1200px) {
-		bottom: 1px;
-		right: 328px;
+  width: 171px;
 
-		width: 236px;
-	}
+  @media screen and (min-width: 768px) {
+    width: 143px;
+    right: 303px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    bottom: 1px;
+    right: 328px;
+
+    width: 236px;
+  }
 }
+
 .hero__girl-img {
-	position: absolute;
-	bottom: 1px;
-	right: 32px;
-	z-index: 2;
-	display: block;
+  position: absolute;
+  bottom: 1px;
+  right: 32px;
+  z-index: 2;
+  display: block;
 
-	width: 190px;
-	opacity: 0;
-	
-	transform: translate(250px, -80px);
-	animation-duration: $hero-anim-time;
-	animation-name: loaded;
-	animation-delay: $hero-anim-delay;
-	animation-fill-mode: forwards;
-	@media screen and (max-width:767.5px) {
-		display: none;
-	}
+  width: 190px;
+  opacity: 0;
 
-	@media screen and (min-width:1200px) {
-		bottom: 0;
-		right: 16px;
+  transform: translate(250px, -80px);
+  animation-duration: $hero-anim-time;
+  animation-name: loaded;
+  animation-delay: $hero-anim-delay;
+  animation-fill-mode: forwards;
 
-		width: 304px;
-	}
+  @media screen and (max-width: 767.5px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    bottom: 0;
+    right: 16px;
+
+    width: 304px;
+  }
 }
+
 .hero__description-img {
-	display: inline-block;
+  display: inline-block;
 
-	width: 152px;
-	@media screen and (min-width:1200px) {
-		width: 213px;
-	}
+  width: 152px;
+
+  @media screen and (min-width: 1200px) {
+    width: 213px;
+  }
 }
 
-.hero__description{
-	position: absolute;
-	bottom: 16px;
-	left: 32px;
-	z-index: 2;
+.hero__description {
+  position: absolute;
+  bottom: 16px;
+  left: 32px;
+  z-index: 2;
 
-	display: flex;
-	justify-items: center;
-	align-items: center;
-	opacity: 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  opacity: 0;
 
-	transform: translate(-200px, -50px);
-	animation-duration: $hero-anim-time;
-	animation-name: loaded;
-	animation-delay: $hero-anim-delay;
-	animation-fill-mode: forwards;
-	@media screen and (max-width:767.5px){
-		display: none;
-	}
-	@media screen and (min-width:1200px){
-		bottom: 60px;
-		left: 16px;
-	}
+  transform: translate(-200px, -50px);
+  animation-duration: $hero-anim-time;
+  animation-name: loaded;
+  animation-delay: $hero-anim-delay;
+  animation-fill-mode: forwards;
+
+  @media screen and (max-width: 767.5px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    bottom: 60px;
+    left: 16px;
+  }
 }
+
 @keyframes loaded {
-	20%{opacity: 0;}
-	100%{
-		transform: scale(1) translate(0, 0);
-		opacity: 1;
-	}
+  20% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
 }
-.hero__description-text{
-	width: 114px;
-	min-height: 50px;
 
-	font-size: 8px;
-	line-height: 1.5;
+.hero__description-text {
+  width: 114px;
+  min-height: 50px;
 
-	color: var(--white_cl);
+  font-size: 8px;
+  line-height: 1.5;
 
-	@media screen and (min-width:1200px){
-		font-size: 14px;
-		line-height: 19.6px;
-		width: 200px;
-		min-height: 80px;
-	}
+  color: var(--white_cl);
+
+  @media screen and (min-width: 1200px) {
+    width: 200px;
+
+    font-size: 14px;
+    line-height: 19.6px;
+    min-height: 80px;
+  }
 }
-.hero__description-toggler{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
 
-	width: 18px;
-	height: 18px;	
-	min-width: 1px;
+.hero__description-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 
-	border-radius: 50%;
-	@media screen and (min-width:1200px) {
-		width: 26px;
-		height: 26px;
-	}
+  width: 18px;
+  height: 18px;
+  min-width: 1px;
+
+  border-radius: 50%;
+
+  @media screen and (min-width: 1200px) {
+    width: 26px;
+    height: 26px;
+  }
 }
-.hero__description-card{
-	position: relative;
-	margin-bottom: 3px;
 
-	min-height: 50px;
-	@media screen and (min-width:1200px) {
-		margin-bottom: 18px;
+.hero__description-card {
+  position: relative;
+  margin-bottom: 3px;
 
-		min-height: 80px;
-	}
+  min-height: 50px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 18px;
+    min-height: 80px;
+  }
 }
-.hero__info{
-	@media screen and (max-width:767.5px) {
-		display: none;
-	}
-	position: absolute;
-	top: 92px;
-	right: 32px;
 
-	font-size: 8px;
-	line-height: 10px;
-	text-align: right;
+.hero__info {
+  @media screen and (max-width: 767.5px) {
+    display: none;
+  }
 
-	color: var(--white_cl);
-	opacity: 0;
-	
-	animation-duration: $hero-anim-time;
-	animation-name: loaded;
-	animation-delay: $hero-anim-delay;
-	animation-fill-mode: forwards;
-	@media screen and (min-width:1200px) {
-		top: 156px;
-		right: 34px;
+  position: absolute;
+  top: 92px;
+  right: 32px;
 
-		font-size: 14px;
-		line-height: 18px;
-	}
+  font-size: 8px;
+  line-height: 10px;
+  text-align: right;
+
+  color: var(--white_cl);
+  opacity: 0;
+
+  animation-duration: $hero-anim-time;
+  animation-name: loaded;
+  animation-delay: $hero-anim-delay;
+  animation-fill-mode: forwards;
+
+  @media screen and (min-width: 1200px) {
+    top: 156px;
+    right: 34px;
+
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
-.hero__info-category{
-	position: relative;
-	z-index: 2;
 
-	font-size: 28px;
-	line-height: 32px;
-	&::before{
-		content: "";
-		position: absolute;
-		top: -2px;
-		right: -10px;
-		z-index: -1;
+.hero__info-category {
+  position: relative;
+  z-index: 2;
 
-		width: 16px;
-		height: 16px;
+  font-size: 28px;
+  line-height: 32px;
 
-		background-color: var(--white_cl);
-		border-radius: 50%;
-		@media screen and (min-width:1200px) {
-			top: -4px;
-			right: -18px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -10px;
+    z-index: -1;
 
-			width: 30px;
-			height: 30px;
-		}
-	}
-	@media screen and (min-width:1200px) {
-		font-size: 46px;
-		line-height: 53px;
-	}
+    width: 16px;
+    height: 16px;
+
+    background-color: var(--white_cl);
+    border-radius: 50%;
+
+    @media screen and (min-width: 1200px) {
+      top: -4px;
+      right: -18px;
+
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 46px;
+    line-height: 53px;
+  }
 }
+
 .hero__info-item {
-	margin-top: 16px;
-	transform: translate(200px, -80px);
-	opacity: 0;
-	animation-duration: $hero-anim-time;
-	animation-name: loaded;
-	animation-delay: $hero-anim-delay;
-	animation-fill-mode: forwards;
-	@media screen and (min-width:1200px) {
-		margin-top: 35px;
-	}
-}
-.hero__container{
-	position: relative;
-	z-index: 3;
-	display: inline-block;
-	margin-top: 20px;
+  margin-top: 16px;
 
-	transform: scale(0.8) translate(-180px, -40px);
-	opacity: 0;
-	animation-duration: $hero-anim-time;
-	animation-name: loaded;
-	animation-delay: $hero-anim-delay;
-	animation-fill-mode: forwards;
-	@media screen and (min-width:1200px) {
-		margin-top: 24px;
-	}
+  opacity: 0;
+  transform: translate(200px, -80px);
+
+  animation-duration: $hero-anim-time;
+  animation-name: loaded;
+  animation-delay: $hero-anim-delay;
+  animation-fill-mode: forwards;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 35px;
+  }
 }
-.hero__link{
-	display: inline-block;
-	margin-right: 12px;
-	text-align: center;
-	@media screen and (max-width:1199.5px) {
-		padding: 9px 14px;
-		min-width: 1px;
-		font-size: 8px;
-		line-height: calc(10.42/8);
-	}
+
+.hero__container {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  margin-top: 20px;
+
+  opacity: 0;
+  transform: scale(0.8) translate(-180px, -40px);
+
+  animation-duration: $hero-anim-time;
+  animation-name: loaded;
+  animation-delay: $hero-anim-delay;
+  animation-fill-mode: forwards;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 24px;
+  }
+}
+
+.hero__link {
+  display: inline-block;
+  margin-right: 12px;
+
+  text-align: center;
+
+  @media screen and (max-width: 1199.5px) {
+    padding: 9px 14px;
+
+    min-width: 1px;
+
+    font-size: 8px;
+    line-height: calc(10.42 / 8);
+  }
 }

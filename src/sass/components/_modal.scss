@@ -1,212 +1,247 @@
 .back-drop {
-	position: fixed;
-	display: flex;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: var(--dark-bg);
-	transition: opacity $animation-func;
-	z-index: 7;
-	@media screen and (max-width:767px) {
-		padding: 15px;
-	}
-	&.is-hidden {
-		opacity: 0;
-		pointer-events: none;
-	}
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--dark-bg);
+  transition: opacity $animation-func;
+ 
+  @media screen and (max-width: 767px) {
+    padding: 15px;
+  }
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
-.modal__content {
-	margin: auto;
-	position: fixed;
-	z-index: 12;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 528px;
-	background-color: #ebccd3;
-	box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.12), 2px 4px 5px rgba(0, 0, 0, 0.14), 2px 4px 5px rgba(0, 0, 0, 0.2);
-	border-radius: 20px;
-	transform: scale(1);
-	transition: transform $animation-func;
-	padding: 40px;
-	transform-origin: bottom left;
-	@media screen and (max-width:1199px) {
-		min-width: 320px;
-		max-width: 450px;
-		padding: 20px;
-		padding-top: 35px;
-	}
-	&.is-hidden{
-		transition: transform $animation-func, opacity $animation-func;
-		transform: rotate(80deg);
-		opacity: 0;
-		pointer-events: none;
-	}
+.modal { 
+  position: fixed;
+  z-index: 12;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  padding: 40px;
+ 
+  max-width: 528px;
+
+  background-color: #ebccd3;
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.12), 2px 4px 5px rgba(0, 0, 0, 0.14),
+    2px 4px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+
+  transform: translate(-50%, -50%);
+  transform: scale(1);
+  transition: transform $animation-func;
+  transform-origin: bottom left;
+
+  @media screen and (max-width: 1199px) {
+    padding: 20px;
+    padding-top: 35px;
+
+    min-width: 320px;
+    max-width: 450px;
+  }
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    transition: transform $animation-func, opacity $animation-func;
+    transform: rotate(80deg);
+  }
 }
 
 .modal__close {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 30px;
-	height: 30px;
-	color: var(--white_cl);
-	background-color: var(--accent-light_cl);
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	transition: color $anim-slow-one,
-	background-color $anim-slow-one;
-	transform: translate(25%,-25%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	&:hover {
-		color: var(--accent_cl);
-		background-color: var(--white_cl);
-	}
+  width: 30px;
+  height: 30px;
+
+  color: var(--white_cl);
+  background-color: var(--accent-light_cl);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+ 
+  cursor: pointer;
+  transition: color $anim-slow-one, background-color $anim-slow-one;
+  transform: translate(25%, -25%);
+
+  &:hover {
+    color: var(--accent_cl);
+    background-color: var(--white_cl);
+  }
 }
 
 .modal__title {
-	text-align: center;
-	margin: 0;
-	margin-bottom: 12px;
-	font-size: 16px;
-	line-height: 21px;
-	color: var(--accent_cl);
-	@media screen and (max-width:767px) {
-		font-size: 20px;
-		line-height: calc(30/20);
-	}
-	@media screen and (min-width:1200px) {
-		font-size: 22px;
-		line-height: calc(30/20);
-	}
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+
+  color: var(--accent_cl);
+
+  @media screen and (max-width: 767px) {
+    font-size: 20px;
+    line-height: calc(30 / 20);
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 22px;
+    line-height: calc(30 / 20);
+  }
 }
 
 .modal__filed {
-	position: relative;
-	width: 100%;
-	display: inline-block;
-	margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+
+  width: 100%;
 }
 
 .modal__label {
-	font-size: 12px;
-	line-height: calc(14.06/12);
-	color: var(--txt-light_cl);
-	letter-spacing: 0.01em;
-	margin-bottom: 4px;
-	@media screen and (min-width:1200px) {
-		font-size: 16px;
-	}
+  margin-bottom: 4px;
+  font-size: 12px;
+
+  color: var(--txt-light_cl);
+
+  line-height: calc(14.06 / 12);
+  letter-spacing: 0.01em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
 
 .modal__input {
-	width: 100%;
-	margin-top: 5px;
-	border: 1px solid transparent;
-	border-radius: 4px;
-	padding: 11px 12px;
-	padding-left: 42px;
-	background-color: var(--white_cl);
-	color: var(--modal-font-color);
-	transition: border $animation-func;
-	font-size: 14px;
-	@media screen and (min-width:1200px) {
-		font-size: 16px;
-	}
-	&:focus {
-		outline: 1px solid var(--accent_cl);
-		border: 1px solid var(--accent_cl);
-	}
-	.modal__form:not(.modal__form:focus-within) &:invalid{
-		animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
-	}
+  width: 100%;
+  margin-top: 5px;
+  padding: 11px 12px;
+  padding-left: 42px;
+  
+  background-color: var(--white_cl);
+  color: var(--modal-font-color);
+
+  font-size: 14px;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: border $animation-func;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+
+  &:focus {
+    outline: 1px solid var(--accent_cl);
+    border: 1px solid var(--accent_cl);
+  }
+
+  .modal__form:not(.modal__form:focus-within) &:invalid {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
 }
 
 .modal__icon {
-	position: absolute;
-	top: 35px;
-	left: 14px;
-	transition: color $animation-func;
+  position: absolute;
+  top: 35px;
+  left: 14px;
+  transition: color $animation-func;
 
-	.modal__input:focus+& {
-		color: var(--accent_cl);
-	}
+  .modal__input:focus + & {
+    color: var(--accent_cl);
+  }
 }
 
 .modal__input--comment {
-	height: 50px;
-	resize: none;
-	padding: 12px 16px;
+  height: 50px;
+  resize: none;
+  padding: 12px 16px;
 }
 
 .modal__filed--checkbox {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-top: 10px;
-	margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .modal__icon-checkbox {
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	background-color: var(--white_cl);
-	border: 2px solid var(--white_cl);
-	border-radius: 2px;
-	transition: background-color $animation-func, border-color $animation-func;
-	margin-right: 7px;
+  display: inline-block;
+  margin-right: 7px;
 
-	.modal__checkbox:checked+& {
-		background-color: var(--accent_cl);
-		border: 2px solid var(--accent_cl);
-	}
-	.modal__form:not(.modal__form:focus-within) .modal__checkbox:invalid+& {
-		animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
-	}
+  width: 16px;
+  height: 16px;
+
+  background-color: var(--white_cl);
+  border: 2px solid var(--white_cl);
+  border-radius: 2px;
+
+  transition: background-color $animation-func, border-color $animation-func;
+ 
+
+  .modal__checkbox:checked + & {
+    background-color: var(--accent_cl);
+    border: 2px solid var(--accent_cl);
+  }
+  .modal__form:not(.modal__form:focus-within) .modal__checkbox:invalid + & {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
 }
 
 .modal__checkbox-label {
-	color: var(--txt-light_cl);
-	letter-spacing: 0.03em;
-	line-height: calc(24/14);
-	cursor: pointer;
+  color: var(--txt-light_cl);
+  letter-spacing: 0.03em;
+  line-height: calc(24 / 14);
+  cursor: pointer;
 
-	@media screen and (max-width:767px) {
-		font-size: 12px;
-		line-height: calc(14/12);
-	}
-	@media screen and (max-width:1199px) {
-		font-size: 14px;
-		line-height: calc(14/12);
-	}
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
+
+  @media screen and (max-width: 1199px) {
+    font-size: 14px;
+    line-height: calc(14 / 12);
+  }
 }
 
 .modal__link {
-	color: var(--accent_cl);
+  color: var(--accent_cl);
 }
 
 .modal__button {
-	@extend .btn;
-	color: var(--white_cl);
-	margin: 0 auto;
-	display: block;
-	@media screen and (min-width:1200px) {
-		font-size: 16px;
-	}
+  @extend .btn;
+  margin: 0 auto;
+  display: block;
+
+  color: var(--white_cl);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
 
 .modal__input--country {
-	padding-left: 14px;
+  padding-left: 14px;
 }
 
 .modal__decor {
-	font-size: 16px;
-	color: var(--accent_cl);
+  font-size: 16px;
+  color: var(--accent_cl);
 }

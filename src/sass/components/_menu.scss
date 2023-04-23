@@ -1,23 +1,27 @@
 // --------------кнопка перемикання мобільного меню--------------//
 .page-header__menu-toggler {
-	z-index: 3;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
 	position: absolute;
 	top: 33px;
 	right: 16px;
+	z-index: 3;
+
+	background-color: transparent;
+
+	border: none;
+	cursor: pointer;
+
 	&.is-open {
 		z-index: 10;
 	}
+
 	@media screen and (min-width:768px) {
 		top: 53px;
 		right: 208px;
 
 		&.is-open {
+			position: fixed;
 			top: 26px;
 			right: 16px;
-			position: fixed;
 		}
 	}
 
@@ -27,19 +31,21 @@
 }
 
 .page-header__menu-toggler .page-header__icon-open {
-	opacity: 1;
 	position: absolute;
 	top: -6px;
 	right: -6px;
+
+	opacity: 1;
 	transition: opacity $animation-func;
 }
 
 
 .page-header__menu-toggler .page-header__icon-close {
-	opacity: 0;
 	position: absolute;
 	top: -6px;
 	right: -6px;
+
+	opacity: 0;
 	transition: opacity $animation-func;
 }
 
@@ -54,16 +60,20 @@
 // --------------контейнер мобільного меню--------------//
 .menu-container {
 	@media screen and (max-width:1199px) {
-		z-index: 9;
 		position: fixed;
-		height: 100vh;
 		top: 0;
 		right: 20px;
-		background-color: var(--mobile-menu-bg);
+		z-index: 9;
 		padding: 60px 0;
+		
+		height: 100vh;
+		
+		background-color: var(--mobile-menu-bg);
+		
 		transform: translateX(20px);
 		transition: transform $animation-func, background-color $animation-func;
 	}
+
 	@media screen and (min-width:1200px) {
 		display: flex;
 		flex-direction: row-reverse;
@@ -76,11 +86,13 @@
 			overflow: hidden;
 		}
 		@media screen and (max-width:1199px) {
-			transform: translateX(calc(100% + 20px));
-			transition: transform $animation-func, background-color $animation-func;
-			background-color: transparent;
 			position: absolute;
 			right: -10px;
+
+			background-color: transparent;
+
+			transform: translateX(calc(100% + 20px));
+			transition: transform $animation-func, background-color $animation-func;
 
 			& .navigation {
 				opacity: 0;
@@ -88,39 +100,48 @@
 		}
 	}
 }
+
 .page-header__button-buy {
 	display: flex;
 	align-items: center;
+	margin: 0 20px;
+	padding: 12px 48px 12px 61px;
+
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 21px;
-	margin: 0 20px;
-	padding: 12px 48px 12px 61px;
+
 	transform: translate(0);
 	transition: transform $animation-func, opacity $animation-func, color $animation-func, background-color $animation-func;
+	
 	@media screen and (max-width:767.5px) {
 			.menu-container.is-closed & {
 				opacity: 0;
 			}
 		}
+	
 	@media screen and (min-width:768px) and (max-width:1199.5px) {
 		margin: 0 34px;
 		padding: 12px 43px;
 
 		.menu-container.is-closed & {
+			padding: 12px 37px;
+
 			transition: transform $animation-func, opacity $animation-func,
 				color $animation-func,
 				background-color $animation-func;
 			transform: translate(-248px, -27px);
-			padding: 12px 37px;
 		}
 	}
+
 	@media screen and (min-width: 1200px) {
+		z-index: 5;
 		margin: 0 0 0 123;
 		padding: 11px 37px;
+
 		font-size: 16px;
 		line-height: 21px;
+		
 		transform: translate(0);
-		z-index: 5;
 	}
 }
