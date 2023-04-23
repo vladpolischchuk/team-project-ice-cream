@@ -1,7 +1,7 @@
 # ***IceCream***
----
+***
 ## Фінальний командний проект з курсу HTML+CSS.
----
+
 ## Зміст
 - [Технології](#Технології)
 - [Технічне завдання проєкту](#Технічне-завдання-проєкту)
@@ -61,4 +61,4 @@
 - Front-end developer: [Серж Бєлкін](https://github.com/serge-belkin)
 - Front-end developer: [Яна Вознюк](https://github.com/Yana16)
 - Front-end developer: [Яна Журавська](https://github.com/YanikZhuravskaya)
-- - Front-end developer: [Іван Гризон](https://github.com/Grizon)
+- Front-end developer: [Іван Гризон](https://github.com/Grizon)
